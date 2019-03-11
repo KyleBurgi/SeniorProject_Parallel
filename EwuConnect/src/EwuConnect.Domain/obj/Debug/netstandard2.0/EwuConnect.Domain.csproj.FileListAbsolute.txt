@@ -1,0 +1,9 @@
+/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/src/EwuConnect.Domain/bin/Debug/netstandard2.0/EwuConnect.Domain.deps.json
+/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/src/EwuConnect.Domain/bin/Debug/netstandard2.0/EwuConnect.Domain.dll
+/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/src/EwuConnect.Domain/bin/Debug/netstandard2.0/EwuConnect.Domain.pdb
+/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/src/EwuConnect.Domain/obj/Debug/netstandard2.0/EwuConnect.Domain.csprojAssemblyReference.cache
+/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/src/EwuConnect.Domain/obj/Debug/netstandard2.0/EwuConnect.Domain.csproj.CoreCompileInputs.cache
+/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/src/EwuConnect.Domain/obj/Debug/netstandard2.0/EwuConnect.Domain.AssemblyInfoInputs.cache
+/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/src/EwuConnect.Domain/obj/Debug/netstandard2.0/EwuConnect.Domain.AssemblyInfo.cs
+/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/src/EwuConnect.Domain/obj/Debug/netstandard2.0/EwuConnect.Domain.dll
+/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/src/EwuConnect.Domain/obj/Debug/netstandard2.0/EwuConnect.Domain.pdb

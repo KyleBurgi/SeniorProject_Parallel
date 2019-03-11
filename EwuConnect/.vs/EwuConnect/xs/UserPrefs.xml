@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{8320744C-7FE0-45CC-A13E-BC6494E9BFDE}|Default">
+  <MonoDevelop.Ide.ItemProperties.test.EwuConnect.Domain.Tests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/EwuConnect.Domain.Tests/Models/Profile/UserTests.cs">
+    <Files>
+      <File FileName="src/EwuConnect.Domain/Models/Profile/User.cs" Line="15" Column="1" />
+      <File FileName="test/EwuConnect.Domain.Tests/Models/Profile/UserTests.cs" Line="17" Column="43" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EwuConnect" expanded="True" selected="True">
+            <Node name="src" expanded="True">
+              <Node name="EwuConnect.Domain" expanded="True">
+                <Node name="Models" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="test" expanded="True">
+              <Node name="EwuConnect.Domain.Tests" expanded="True">
+                <Node name="Dependencies" expanded="True" />
+                <Node name="Models" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="EwuConnect" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
