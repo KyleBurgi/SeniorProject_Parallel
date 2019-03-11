@@ -3,7 +3,7 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
-    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/test/EwuConnect.Domain.Tests/obj/project.assets.json</ProjectAssetsFile>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">/Users/kyleburgi/Desktop/SeniorProject/Parallel_EwuConnect/Parallel_EwuConnect/EwuConnect/test/EwuConnect.Domain.Tests/obj/project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/kyleburgi/.nuget/packages/</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/kyleburgi/.nuget/packages/;/usr/local/share/dotnet/sdk/NuGetFallbackFolder</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>

@@ -5843,11 +5843,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/test/EwuConnect.Domain.Tests/EwuConnect.Domain.Tests.csproj",
+      "projectUniqueName": "/Users/kyleburgi/Desktop/SeniorProject/Parallel_EwuConnect/Parallel_EwuConnect/EwuConnect/test/EwuConnect.Domain.Tests/EwuConnect.Domain.Tests.csproj",
       "projectName": "EwuConnect.Domain.Tests",
-      "projectPath": "/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/test/EwuConnect.Domain.Tests/EwuConnect.Domain.Tests.csproj",
+      "projectPath": "/Users/kyleburgi/Desktop/SeniorProject/Parallel_EwuConnect/Parallel_EwuConnect/EwuConnect/test/EwuConnect.Domain.Tests/EwuConnect.Domain.Tests.csproj",
       "packagesPath": "/Users/kyleburgi/.nuget/packages/",
-      "outputPath": "/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/test/EwuConnect.Domain.Tests/obj/",
+      "outputPath": "/Users/kyleburgi/Desktop/SeniorProject/Parallel_EwuConnect/Parallel_EwuConnect/EwuConnect/test/EwuConnect.Domain.Tests/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -5864,8 +5864,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/src/EwuConnect.Domain/EwuConnect.Domain.csproj": {
-              "projectPath": "/Users/kyleburgi/Desktop/KyleTest_SP/EwuConnect/src/EwuConnect.Domain/EwuConnect.Domain.csproj"
+            "/Users/kyleburgi/Desktop/SeniorProject/Parallel_EwuConnect/Parallel_EwuConnect/EwuConnect/src/EwuConnect.Domain/EwuConnect.Domain.csproj": {
+              "projectPath": "/Users/kyleburgi/Desktop/SeniorProject/Parallel_EwuConnect/Parallel_EwuConnect/EwuConnect/src/EwuConnect.Domain/EwuConnect.Domain.csproj"
             }
           }
         }

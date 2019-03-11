@@ -8,7 +8,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="EwuConnect" expanded="True" selected="True">
+          <Node name="EwuConnect" expanded="True">
             <Node name="src" expanded="True">
               <Node name="EwuConnect.Domain" expanded="True">
                 <Node name="Models" expanded="True" />
@@ -17,15 +17,14 @@
             <Node name="test" expanded="True">
               <Node name="EwuConnect.Domain.Tests" expanded="True">
                 <Node name="Dependencies" expanded="True" />
-                <Node name="Models" expanded="True" />
+                <Node name="Models" expanded="True">
+                  <Node name="Profile" expanded="True">
+                    <Node name="UserTests.cs" selected="True" />
+                  </Node>
+                </Node>
               </Node>
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="EwuConnect" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
