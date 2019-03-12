@@ -1,15 +1,13 @@
 ﻿<Properties StartupConfiguration="{8320744C-7FE0-45CC-A13E-BC6494E9BFDE}|Default">
   <MonoDevelop.Ide.ItemProperties.test.EwuConnect.Domain.Tests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test/EwuConnect.Domain.Tests/Services/Profile/UserServiceTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Domain/Models/Profile/User.cs">
     <Files>
-      <File FileName="test/EwuConnect.Domain.Tests/Models/Profile/UserTests.cs" Line="28" Column="18" />
-      <File FileName="src/EwuConnect.Domain/Models/Interfaces/IEntity.cs" Line="6" Column="9" />
-      <File FileName="src/EwuConnect.Domain/Models/Profile/User.cs" Line="22" Column="42" />
-      <File FileName="src/EwuConnect.Domain/Models/Profile/Entity.cs" Line="9" Column="2" />
-      <File FileName="src/EwuConnect.Domain/Models/Profile/Education.cs" Line="11" Column="49" />
+      <File FileName="test/EwuConnect.Domain.Tests/Models/Profile/UserTests.cs" Line="20" Column="36" />
+      <File FileName="src/EwuConnect.Domain/Models/Profile/User.cs" Line="20" Column="31" />
+      <File FileName="src/EwuConnect.Domain/Models/Profile/Education.cs" Line="11" Column="18" />
       <File FileName="src/EwuConnect.Domain/Models/ApplicationDbContext.cs" Line="16" Column="1" />
-      <File FileName="src/EwuConnect.Domain/Services/UserService.cs" Line="43" Column="45" />
-      <File FileName="test/EwuConnect.Domain.Tests/Services/Profile/UserServiceTests.cs" Line="36" Column="38" />
+      <File FileName="src/EwuConnect.Domain/Services/UserService.cs" Line="9" Column="11" />
+      <File FileName="test/EwuConnect.Domain.Tests/Services/Profile/UserServiceTests.cs" Line="40" Column="46" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,8 +15,10 @@
           <Node name="EwuConnect" expanded="True">
             <Node name="src" expanded="True">
               <Node name="EwuConnect.Domain" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="PackageDependencies" expanded="True" />
+                </Node>
                 <Node name="Models" expanded="True">
-                  <Node name="Interfaces" expanded="True" />
                   <Node name="Profile" expanded="True" />
                 </Node>
                 <Node name="Services" expanded="True" />
@@ -31,8 +31,32 @@
                   <Node name="Profile" expanded="True" />
                 </Node>
                 <Node name="Services" expanded="True">
-                  <Node name="Profile" expanded="True">
-                    <Node name="UserServiceTests.cs" selected="True" />
+                  <Node name="Profile" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="EwuConnect" expanded="True">
+            <Node name="test" expanded="True">
+              <Node name="EwuConnect.Domain.Tests" expanded="True">
+                <Node name="EwuConnect" expanded="True">
+                  <Node name="Domain" expanded="True">
+                    <Node name="Tests" expanded="True">
+                      <Node name="Models" expanded="True">
+                        <Node name="Profile" expanded="True">
+                          <Node name="UserTests" expanded="True" />
+                        </Node>
+                      </Node>
+                      <Node name="Services" expanded="True">
+                        <Node name="UserServiceTests" expanded="True">
+                          <Node name="UpdateUser_RequiredInfo_Pass" selected="True" />
+                        </Node>
+                      </Node>
+                    </Node>
                   </Node>
                 </Node>
               </Node>

@@ -23,13 +23,13 @@ namespace EwuConnect.Domain.Tests.Models.Profile
         }
 
         [TestMethod]
-        public void AddUser()
+        public void AddUser_RequiredInfo_Pass()
         {
             User u = new User 
             { 
                FirstName = "Kyle", 
                LastName = "Burgi",
-               Email = "FakeEmail@FakeService.Com",
+               Email = "FakeEmail@FakeService.com",
                PhoneNumber = "(123)456-7890",
                State = "WA",
                City = "Spokane"
@@ -40,6 +40,7 @@ namespace EwuConnect.Domain.Tests.Models.Profile
 
             Assert.AreEqual("Kyle", users[0].FirstName);
             Assert.AreEqual("Burgi", users[0].LastName);
+            Assert.AreEqual("FakeEmail@FakeService.com", users[0].Email);
         }
     }
 }

@@ -16,10 +16,6 @@ namespace EwuConnect.Domain.Services
             DbContext = context;
         }
 
-        public UserService()
-        {
-        }
-
         public void AddUser(User user)
         {
             DbContext.Users.Add(user);
@@ -42,6 +38,7 @@ namespace EwuConnect.Domain.Services
         {
             return DbContext.Users.Find(id);
         }
+        
 
     }
 }
