@@ -12,5 +12,10 @@
     <Folder Include="Models\Profile\" />
     <Folder Include="Models\Forum\" />
     <Folder Include="Models\Chat\" />
+    <Folder Include="Models\Interfaces\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.3" />
   </ItemGroup>
 </Project>

@@ -1,10 +1,9 @@
 ﻿using System;
+using EwuConnect.Domain.Models.Interfaces;
 namespace EwuConnect.Domain.Models.Profile
 {
-    public class Entity
+    public class Entity : IEntity
     {
-        public Entity()
-        {
-        }
+        public int ID { get; set; }
     }
 }

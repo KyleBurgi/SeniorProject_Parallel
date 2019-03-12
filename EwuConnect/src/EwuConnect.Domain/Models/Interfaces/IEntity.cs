@@ -1,8 +1,8 @@
 ﻿using System;
 namespace EwuConnect.Domain.Models.Interfaces
 {
-    public interface IUser
+    public interface IEntity
     {
-        public int ID { get; set; }
+        int ID { get; set; }
     }
 }

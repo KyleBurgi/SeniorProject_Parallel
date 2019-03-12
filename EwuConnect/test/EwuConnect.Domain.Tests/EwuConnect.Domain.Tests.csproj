@@ -18,5 +18,7 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Models\Profile\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Profile\" />
   </ItemGroup>
 </Project>
