@@ -1,7 +1,8 @@
 ﻿using System;
 namespace EwuConnect.Domain.Models.Profile.SkillKeywords
 {
-    public enum EmptyEnumeration
+    public enum SkillKeyworldEnumaration
     {
+
     }
 }

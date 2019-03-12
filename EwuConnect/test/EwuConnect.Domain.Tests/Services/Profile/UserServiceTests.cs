@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using EwuConnect.Domain.Models;
 using EwuConnect.Domain.Models.Profile;
 using EwuConnect.Domain.Services;
@@ -21,7 +22,7 @@ namespace EwuConnect.Domain.Tests.Services.Profile
                     .AddFilter(DbLoggerCategory.Database.Command.Name,
                                 LogLevel.Information);
             });
-                    
+
             return serviceCollection.BuildServiceProvider()
                 .GetService<ILoggerFactory>();
         }
@@ -39,8 +40,8 @@ namespace EwuConnect.Domain.Tests.Services.Profile
                 .UseLoggerFactory(GetLoggerFactory())
                 .EnableSensitiveDataLogging()
                 .Options;
-                
-            using(var context = new ApplicationDbContext(Options))
+
+            using (var context = new ApplicationDbContext(Options))
             {
                 context.Database.EnsureCreated();
             }
@@ -55,11 +56,12 @@ namespace EwuConnect.Domain.Tests.Services.Profile
         [TestMethod]
         public void AddUser_RequiredInfo_Pass()
         {
+            User fetchedUser2 = null;
             using (var context = new ApplicationDbContext(Options))
             {
                 UserService service = new UserService(context);
 
-                User u = new User
+                User u = new Mentee
                 {
                     FirstName = "Kyle",
                     LastName = "Burgi",
@@ -69,27 +71,46 @@ namespace EwuConnect.Domain.Tests.Services.Profile
                     City = "Spokane"
                 };
 
-                service.AddUser(u);
+                User u2 = new Mentee
+                {
+                    FirstName = "Kyle2",
+                    LastName = "Burgi2",
+                    Email = "FakeEmail@FakeService.com2",
+                    PhoneNumber = "(123) 456-78902",
+                    State = "WA2",
+                    City = "Spokane2"
+                };
 
-                User fetchedUser = service.FetchUser(1);
+                service.AddUser(u);
+                service.AddUser(u2);
+
+                User fetchedUser = service.GetUser(1);
                 Assert.AreEqual("Kyle", fetchedUser.FirstName);
                 Assert.AreEqual("Burgi", fetchedUser.LastName);
                 Assert.AreEqual("FakeEmail@FakeService.com", fetchedUser.Email);
                 Assert.AreEqual("WA", fetchedUser.State);
+
+                fetchedUser2 = service.GetUser(2);
+
             }
+            Assert.AreEqual("Kyle2", fetchedUser2.FirstName);
+            Assert.AreEqual("Burgi2", fetchedUser2.LastName);
+            Assert.AreEqual("FakeEmail@FakeService.com2", fetchedUser2.Email);
+            Assert.AreEqual("WA2", fetchedUser2.State);
         }
 
         [TestMethod]
         public void UpdateUser_RequiredInfo_Pass()
         {
             User fetchedUser = null;
+            User fetchedUser2 = null;
             User secondFetch = null;
 
             using (var context = new ApplicationDbContext(Options))
             {
                 UserService service = new UserService(context);
 
-                User u = new User
+                User u = new Mentee
                 {
                     FirstName = "Kyle",
                     LastName = "Burgi",
@@ -99,9 +120,21 @@ namespace EwuConnect.Domain.Tests.Services.Profile
                     City = "Spokane"
                 };
 
-                service.AddUser(u);
+                User u2 = new Mentee
+                {
+                    FirstName = "Kyle2",
+                    LastName = "Burgi2",
+                    Email = "FakeEmail@FakeService.com2",
+                    PhoneNumber = "(123) 456-78902",
+                    State = "WA2",
+                    City = "Spokane2"
+                };
 
-                fetchedUser = service.FetchUser(1);
+                service.AddUser(u);
+                service.AddUser(u2);
+
+                fetchedUser = service.GetUser(1);
+                fetchedUser2 = service.GetUser(2);
 
             }
 
@@ -117,7 +150,7 @@ namespace EwuConnect.Domain.Tests.Services.Profile
                 service.UpdateUser(fetchedUser);
 
 
-                secondFetch = service.FetchUser(1);
+                secondFetch = service.GetUser(1);
                 Assert.AreEqual("Jess", fetchedUser.FirstName);
                 Assert.AreEqual("Jahn", fetchedUser.LastName);
                 Assert.AreEqual("AnotherFakeEmail@FS.com", fetchedUser.Email);

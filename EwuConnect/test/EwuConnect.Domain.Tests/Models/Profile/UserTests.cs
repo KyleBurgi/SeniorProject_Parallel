@@ -17,7 +17,7 @@ namespace EwuConnect.Domain.Tests.Models.Profile
         [TestMethod]
         public void User_CreateUser_Pass()
         {
-            User user = new User { FirstName = "Kyle", LastName = "Burgi" };
+            User user = new Mentee { FirstName = "Kyle", LastName = "Burgi" };
             Assert.AreEqual("Kyle", user.FirstName);
             Assert.AreEqual("Burgi", user.LastName);
         }
@@ -25,7 +25,7 @@ namespace EwuConnect.Domain.Tests.Models.Profile
         [TestMethod]
         public void AddUser_RequiredInfo_Pass()
         {
-            User u = new User 
+            User u = new Mentee 
             { 
                FirstName = "Kyle", 
                LastName = "Burgi",

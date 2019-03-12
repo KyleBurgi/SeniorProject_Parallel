@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using EwuConnect.Domain.Models.Profile.SkillKeywords;
 
 namespace EwuConnect.Domain.Models.Profile
 {
@@ -14,19 +16,31 @@ namespace EwuConnect.Domain.Models.Profile
         public string NameTitle { get; set; } //Mrs., Mr., Dr., etc...
 
         //Personal Biography
-        public string PersonalBio { get; set; }
-
-        //Education
-        public List<Education> Education { get; set; }
-
-        //Work History - only for mentors
-        public string CurrentJob { get; set; }
-        //public List<string> WorkHistory { get; set; }
+        public PersonalBiography PersonalBio { get; set; }
 
         //ContactInfo
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string State { get; set; }
         public string City { get; set; }
+
+    }
+
+    public class Mentor : User
+    {
+        //Mentor Tags
+        private List<SkillKeyword> SkillKeywords { get; set; }
+
+        //Work History - only for mentors
+        public List<UserWorkExperience> WorkHistory { get; set; }
+
+        //Education
+        public List<UserEducation> MentorsEducation { get; set; }
+    }
+
+    public class Mentee : User
+    {
+        //Education
+        public List<UserEducation> MenteeEducation { get; set; }
     }
 }

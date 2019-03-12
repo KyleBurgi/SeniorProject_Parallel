@@ -7,8 +7,14 @@ namespace EwuConnect.Domain.Services
     public class UserService
     {
         //TODO
-        //Should be made Async
-        //Add HTML Tags for Get/set/etc.
+        //* Should be made Async
+        //* Add HTML Tags for Get/set/etc.
+        //* CRUD
+            //Create
+            //Read
+            //Update
+            //Delete
+        //* 
         private ApplicationDbContext DbContext { get; }
 
         public UserService(ApplicationDbContext context)
@@ -34,7 +40,7 @@ namespace EwuConnect.Domain.Services
             DbContext.SaveChanges();
         }
 
-        public User FetchUser(int id) 
+        public User GetUser(int id) 
         {
             return DbContext.Users.Find(id);
         }
