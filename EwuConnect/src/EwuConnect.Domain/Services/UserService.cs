@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using EwuConnect.Domain.Models;
 using EwuConnect.Domain.Models.Profile;
+using Microsoft.EntityFrameworkCore;
 
 namespace EwuConnect.Domain.Services
 {
@@ -42,9 +45,16 @@ namespace EwuConnect.Domain.Services
 
         public User GetUser(int id) 
         {
-            return DbContext.Users.Find(id);
+            return DbContext.Users
+                .SingleOrDefault(u => u.Id == id);
         }
-        
+
+        public List<User> GetBatchUsers()
+        {
+            //Use LINQ to get a List<User>
+            return null;
+        }
+
 
     }
 }

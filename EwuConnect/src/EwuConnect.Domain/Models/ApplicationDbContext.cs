@@ -8,7 +8,6 @@ namespace EwuConnect.Domain.Models
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Education> Education { get; set; }
-        //public DbSet<UserEducation> UserEducation { get; set; }
         public DbSet<Mentee> Mentee { get; set; }
         public DbSet<Mentor> Mentor { get; set; }
 
@@ -16,6 +15,7 @@ namespace EwuConnect.Domain.Models
         { 
 
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Mentee>().HasBaseType<User>();
