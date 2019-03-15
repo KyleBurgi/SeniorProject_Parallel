@@ -10,19 +10,15 @@ namespace EwuConnect.Domain.Services
     public class UserService
     {
         //TODO
-        //* Should be made Async
-        //* Add HTML Tags for Get/set/etc.
-        //* CRUD
-            //Create
-            //Read
-            //Update
-            //Delete
         //* 
+        //* Should be made Async
+        //* 
+
         private ApplicationDbContext DbContext { get; }
 
-        public UserService(ApplicationDbContext context)
+        public UserService(ApplicationDbContext dbContext)
         {
-            DbContext = context;
+            DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
         public void AddUser(User user)
@@ -37,12 +33,6 @@ namespace EwuConnect.Domain.Services
             DbContext.SaveChanges();
         }
 
-        public void RemoveUser(User user)
-        {
-            DbContext.Users.Remove(user);
-            DbContext.SaveChanges();
-        }
-
         public User GetUser(int id) 
         {
             return DbContext.Users
@@ -51,11 +41,21 @@ namespace EwuConnect.Domain.Services
 
         public List<User> GetBatchUsers()
         {
-            //Use LINQ to get a List<User>
-            return null;
+            return DbContext.Users.ToList();
         }
 
+        public bool DeleteUser(int id)
+        {
+            User foundUser = DbContext.Users.Find(id);
 
+            if(foundUser != null)
+            {
+                DbContext.Users.Remove(foundUser);
+                DbContext.SaveChanges();
+                return true;
+            }
+            return false;
+        }
     }
 }
 

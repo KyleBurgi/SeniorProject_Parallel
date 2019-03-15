@@ -58,9 +58,11 @@ namespace EwuConnect.Domain.Tests.Services.Profile
         [ExpectedException(typeof(ArgumentNullException))]
         public void UserService_RequiresDbContext()
         {
-            new UserService(null);
+            UserService service = new UserService(null);
         }
 
+
+        /*ADD*/
         [TestMethod]
         public void AddUser_RequiredInfo_Pass()
         {
@@ -107,6 +109,101 @@ namespace EwuConnect.Domain.Tests.Services.Profile
             Assert.AreEqual("WA2", fetchedUser2.State);
         }
 
+        /*READ*/
+        [TestMethod]
+        public void FindUser_OneUser_Pass()
+        {
+            User fetchedUser = null;
+            User stagedUser = null;
+            using (var context = new ApplicationDbContext(Options))
+            {
+                UserService service = new UserService(context);
+
+                User u = new Mentee
+                {
+                    FirstName = "Kyle",
+                    LastName = "Burgi",
+                    Email = "FakeEmail@FakeService.com",
+                    PhoneNumber = "(123) 456-7890",
+                    State = "WA",
+                    City = "Spokane"
+                };
+
+                stagedUser = u;
+                service.AddUser(u);
+                fetchedUser = service.GetUser(1);
+            }
+
+            Assert.AreEqual(stagedUser, fetchedUser);
+            Assert.AreEqual("Kyle", fetchedUser.FirstName);
+            Assert.AreEqual("Burgi", fetchedUser.LastName);
+            Assert.AreEqual(1, fetchedUser.Id);
+        }
+
+        [TestMethod]
+        public void FindUser_MultipleUser_Pass()
+        {
+            User fetchedUser = null;
+            User fetchedUser2 = null;
+            User stagedUser = null;
+            User stagedUser2 = null;
+            using (var context = new ApplicationDbContext(Options))
+            {
+                UserService service = new UserService(context);
+
+                stagedUser = new Mentee
+                {
+                    FirstName = "Kyle",
+                    LastName = "Burgi",
+                    Email = "FakeEmail@FakeService.com",
+                    PhoneNumber = "(123) 456-7890",
+                    State = "WA",
+                    City = "Spokane"
+                };
+
+                stagedUser2 = new Mentee
+                {
+                    FirstName = "Kyle2",
+                    LastName = "Burgi2",
+                    Email = "FakeEmail@FakeService.com2",
+                    PhoneNumber = "(123) 456-78902",
+                    State = "WA2",
+                    City = "Spokane2"
+                };
+
+                service.AddUser(stagedUser);
+                service.AddUser(stagedUser2);
+            }
+
+            using (var context = new ApplicationDbContext(Options))
+            {
+                UserService service = new UserService(context);
+                fetchedUser = service.GetUser(1);
+            }
+
+            using (var context = new ApplicationDbContext(Options))
+            {
+                UserService service = new UserService(context);
+                fetchedUser2 = service.GetUser(2);
+            }
+
+            //Assert.AreEqual(stagedUser, fetchedUser);
+            Assert.AreEqual(1, fetchedUser.Id);
+            //Assert.AreEqual(stagedUser2, fetchedUser2);
+            Assert.AreEqual(2, fetchedUser2.Id);
+        }
+
+        [TestMethod]
+        public void FindUser_NoUser_Pass()
+        {
+            using (var context = new ApplicationDbContext(Options))
+            {
+                UserService service = new UserService(context);
+                Assert.AreEqual(null, service.GetUser(1));
+            }
+        }
+
+        /*UPDATE*/
         [TestMethod]
         public void UpdateUser_RequiredInfo_Pass()
         {
@@ -167,97 +264,41 @@ namespace EwuConnect.Domain.Tests.Services.Profile
             }
         }
 
+        /*DELETE*/
         [TestMethod]
-        public void FindUser_OneUser_Pass()
+        public void DeleteUser_Pass() 
         {
-            User fetchedUser = null;
-            User stagedUser = null;
+            User u = new Mentee
+            {
+                FirstName = "Kyle",
+                LastName = "Burgi",
+                Email = "FakeEmail@FakeService.com",
+                PhoneNumber = "(123) 456-7890",
+                State = "WA",
+                City = "Spokane"
+            };
             using (var context = new ApplicationDbContext(Options))
             {
                 UserService service = new UserService(context);
 
-                User u = new Mentee
-                {
-                    FirstName = "Kyle",
-                    LastName = "Burgi",
-                    Email = "FakeEmail@FakeService.com",
-                    PhoneNumber = "(123) 456-7890",
-                    State = "WA",
-                    City = "Spokane"
-                };
-
-                stagedUser = u;
                 service.AddUser(u);
-                fetchedUser = service.GetUser(1);
-            }
-
-            Assert.AreEqual(stagedUser, fetchedUser);
-            Assert.AreEqual("Kyle", fetchedUser.FirstName);
-            Assert.AreEqual("Burgi", fetchedUser.LastName);
-            Assert.AreEqual(1, fetchedUser.Id);
-        }
-
-        [TestMethod]
-        public void FindUser_MultipleUser_Pass()
-        {
-            User fetchedUser = null;
-            User fetchedUser2 = null;
-            User stagedUser = null;
-            User stagedUser2 = null; 
-            using (var context = new ApplicationDbContext(Options))
-            {
-                UserService service = new UserService(context);
-
-                stagedUser = new Mentee
-                {
-                    FirstName = "Kyle",
-                    LastName = "Burgi",
-                    Email = "FakeEmail@FakeService.com",
-                    PhoneNumber = "(123) 456-7890",
-                    State = "WA",
-                    City = "Spokane"
-                };
-
-                stagedUser2 = new Mentee
-                {
-                    FirstName = "Kyle2",
-                    LastName = "Burgi2",
-                    Email = "FakeEmail@FakeService.com2",
-                    PhoneNumber = "(123) 456-78902",
-                    State = "WA2",
-                    City = "Spokane2"
-                };
-
-                service.AddUser(stagedUser);
-                service.AddUser(stagedUser2);
             }
 
             using (var context = new ApplicationDbContext(Options))
             {
                 UserService service = new UserService(context);
-                fetchedUser = service.GetUser(1);
+                bool deletedUser = service.DeleteUser(1);
+                Assert.IsTrue(deletedUser);
             }
 
             using (var context = new ApplicationDbContext(Options))
             {
                 UserService service = new UserService(context);
-                fetchedUser2 = service.GetUser(2);
+                User nullUser = service.GetUser(2);
+                Assert.IsNull(nullUser);
             }
 
-            //Assert.AreEqual(stagedUser, fetchedUser);
-            Assert.AreEqual(1, fetchedUser.Id);
-            //Assert.AreEqual(stagedUser2, fetchedUser2);
-            Assert.AreEqual(2, fetchedUser2.Id);
-        }
-
-        [TestMethod]
-        public void FindUser_NoUser_Pass()
-        {
-            using (var context = new ApplicationDbContext(Options))
-            {
-                UserService service = new UserService(context);
-                Assert.AreEqual(null, service.GetUser(1));
-            }
         }
     }
 }
+

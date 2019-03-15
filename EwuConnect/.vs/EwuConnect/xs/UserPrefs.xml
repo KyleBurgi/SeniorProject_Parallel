@@ -3,7 +3,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Domain/Services/UserService.cs">
     <Files>
       <File FileName="src/EwuConnect.Domain/Models/Profile/User.cs" Line="32" Column="61" />
-      <File FileName="src/EwuConnect.Domain/Models/ApplicationDbContext.cs" Line="18" Column="9" />
+      <File FileName="src/EwuConnect.Domain/Models/ApplicationDbContext.cs" Line="18" Column="1" />
       <File FileName="src/EwuConnect.Domain/Services/UserService.cs" Line="49" Column="19" />
       <File FileName="test/EwuConnect.Domain.Tests/Services/Profile/UserServiceTests.cs" Line="119" Column="34" />
     </Files>
@@ -42,28 +42,7 @@
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="EwuConnect" expanded="True">
-            <Node name="test" expanded="True">
-              <Node name="EwuConnect.Domain.Tests" expanded="True">
-                <Node name="EwuConnect" expanded="True">
-                  <Node name="Domain" expanded="True">
-                    <Node name="Tests" expanded="True">
-                      <Node name="Models" expanded="True">
-                        <Node name="Profile" expanded="True">
-                          <Node name="UserTests" expanded="True" />
-                        </Node>
-                      </Node>
-                      <Node name="Services" expanded="True">
-                        <Node name="UserServiceTests" expanded="True">
-                          <Node name="AddUser_RequiredInfo_Pass" selected="True" />
-                        </Node>
-                      </Node>
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="EwuConnect" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
