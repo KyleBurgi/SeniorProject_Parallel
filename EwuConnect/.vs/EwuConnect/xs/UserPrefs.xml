@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{8320744C-7FE0-45CC-A13E-BC6494E9BFDE}|Default">
+  <MonoDevelop.Ide.ItemProperties.src.EwuConnect.Api FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.test.EwuConnect.Domain.Tests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test/EwuConnect.Domain.Tests/Services/Profile/EducationServiceTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Domain/Models/ApplicationDbContext.cs">
     <Files>
       <File FileName="src/EwuConnect.Domain/Models/Profile/User.cs" Line="32" Column="61" />
-      <File FileName="src/EwuConnect.Domain/Models/ApplicationDbContext.cs" Line="18" Column="1" />
+      <File FileName="src/EwuConnect.Domain/Models/ApplicationDbContext.cs" Line="24" Column="49" />
       <File FileName="src/EwuConnect.Domain/Services/UserService.cs" Line="58" Column="10" />
       <File FileName="src/EwuConnect.Domain/Services/EducationService.cs" Line="12" Column="34" />
       <File FileName="test/EwuConnect.Domain.Tests/Services/Profile/UserServiceTests.cs" Line="16" Column="6" />
       <File FileName="test/EwuConnect.Domain.Tests/Services/Profile/DatabaseServiceTests.cs" Line="54" Column="1" />
-      <File FileName="test/EwuConnect.Domain.Tests/Services/Profile/EducationServiceTests.cs" Line="4" Column="12" />
+      <File FileName="test/EwuConnect.Domain.Tests/Services/Profile/EducationServiceTests.cs" Line="13" Column="32" />
+      <File FileName="src/EwuConnect.Domain/Models/Profile/UserEducation.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,6 +20,7 @@
               <Node name="EwuConnect.Domain" expanded="True">
                 <Node name="Models" expanded="True">
                   <Node name="Profile" expanded="True" />
+                  <Node name="ApplicationDbContext.cs" selected="True" />
                 </Node>
                 <Node name="Services" expanded="True" />
               </Node>
@@ -25,9 +28,7 @@
             <Node name="test" expanded="True">
               <Node name="EwuConnect.Domain.Tests" expanded="True">
                 <Node name="Services" expanded="True">
-                  <Node name="Profile" expanded="True">
-                    <Node name="EducationServiceTests.cs" selected="True" />
-                  </Node>
+                  <Node name="Profile" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -41,7 +42,11 @@
               <Node name="EwuConnect.Domain.Tests" expanded="True">
                 <Node name="EwuConnect" expanded="True">
                   <Node name="Domain" expanded="True">
-                    <Node name="Tests" expanded="True" selected="True" />
+                    <Node name="Tests" expanded="True" selected="True">
+                      <Node name="Services" expanded="True">
+                        <Node name="EducationServiceTests" expanded="True" />
+                      </Node>
+                    </Node>
                   </Node>
                 </Node>
               </Node>

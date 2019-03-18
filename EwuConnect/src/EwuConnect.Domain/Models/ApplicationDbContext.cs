@@ -21,9 +21,14 @@ namespace EwuConnect.Domain.Models
             modelBuilder.Entity<Mentee>().HasBaseType<User>();
             modelBuilder.Entity<Mentor>().HasBaseType<User>();
 
-            modelBuilder.Entity<UserEducation>().HasKey(ue => new { ue.UserId, ue.EducationId });
+            modelBuilder.Entity<UserEducation>()
+                .HasKey(ue => new { ue.UserId, ue.EducationId });
 
-            modelBuilder.Entity<UserWorkExperience>().HasKey(ue => new { ue.UserId, ue.WorkExperienceId });
+            modelBuilder.Entity<UserEducation>()
+                .HasOne(ue => ue.Education);
+
+            modelBuilder.Entity<UserWorkExperience>()
+                .HasKey(ue => new { ue.UserId, ue.WorkExperienceId });
 
         }
 
