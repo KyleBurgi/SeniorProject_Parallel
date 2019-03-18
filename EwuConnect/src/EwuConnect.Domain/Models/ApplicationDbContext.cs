@@ -24,9 +24,6 @@ namespace EwuConnect.Domain.Models
             modelBuilder.Entity<UserEducation>()
                 .HasKey(ue => new { ue.UserId, ue.EducationId });
 
-            modelBuilder.Entity<UserEducation>()
-                .HasOne(ue => ue.Education);
-
             modelBuilder.Entity<UserWorkExperience>()
                 .HasKey(ue => new { ue.UserId, ue.WorkExperienceId });
 
