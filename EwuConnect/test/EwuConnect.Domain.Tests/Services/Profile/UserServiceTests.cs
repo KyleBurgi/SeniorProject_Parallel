@@ -12,48 +12,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace EwuConnect.Domain.Tests.Services.Profile
 {
     [TestClass]
-    public class UserServiceTests
+    public class UserServiceTests : DatabaseServiceTests
     {
-        ILoggerFactory GetLoggerFactory()
-        {
-            IServiceCollection serviceCollection = new ServiceCollection();
-            serviceCollection.AddLogging(builder =>
-            {
-                builder.AddConsole()
-                    .AddFilter(DbLoggerCategory.Database.Command.Name,
-                                LogLevel.Information);
-            });
-
-            return serviceCollection.BuildServiceProvider()
-                .GetService<ILoggerFactory>();
-        }
-        private SqliteConnection SqliteConnection { get; set; }
-        private DbContextOptions<ApplicationDbContext> Options { get; set; }
-
-        [TestInitialize]
-        public void OpenConnect()
-        {
-            SqliteConnection = new SqliteConnection("DataSource=:memory:");
-            SqliteConnection.Open();
-
-            Options = new DbContextOptionsBuilder<ApplicationDbContext>()
-                .UseSqlite(SqliteConnection)
-                .UseLoggerFactory(GetLoggerFactory())
-                .EnableSensitiveDataLogging()
-                .Options;
-
-            using (var context = new ApplicationDbContext(Options))
-            {
-                context.Database.EnsureCreated();
-            }
-        }
-
-        [TestCleanup]
-        public void CloseConnection()
-        {
-            SqliteConnection.Close();
-        }
-
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void UserService_RequiresDbContext()
