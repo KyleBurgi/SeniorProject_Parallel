@@ -2,7 +2,7 @@
 
 - This is a modified version of EwuConnect that I have been working on to refactor the EntityFramework Database
 
-## TODO
+# TODO
 # Overall
 - Continue working on OVERALL
 	- Make the app async as to avoid conflicts during database use
@@ -40,7 +40,7 @@
 - TO BE COMPLETED: April 15th
 
 # EwuConnect.Web
-- NEED TO LEARN MORE AND START TO GET TO VIEW
+- NEED TO LEARN MORE AND IN ORDER TO START VIEW SIDE OF THINGS
 	- Timeline for start, April 1st
 
 ## Helpful Links
