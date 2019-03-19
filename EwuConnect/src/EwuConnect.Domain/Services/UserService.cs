@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using EwuConnect.Domain.Models;
 using EwuConnect.Domain.Models.Profile;
-using Microsoft.EntityFrameworkCore;
+using EwuConnect.Domain.Services.Interfaces;
 
 namespace EwuConnect.Domain.Services
 {
-    public class UserService
+    //TODO
+    //* 
+    //* Should be made Async
+    //* 
+
+    public class UserService : IUserService
     {
-        //TODO
-        //* 
-        //* Should be made Async
-        //* 
 
         private ApplicationDbContext DbContext { get; }
 

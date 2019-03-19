@@ -7,10 +7,10 @@ using EwuConnect.Domain.Services.Interfaces;
 
 namespace EwuConnect.Domain.Services
 {
-    /*
-        TODO:
-            Async
-    */
+    //TODO
+    //* 
+    //* Should be made Async
+    //* 
 
     public class EducationService : IEducationService
     {

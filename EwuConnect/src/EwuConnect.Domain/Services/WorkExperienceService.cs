@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using EwuConnect.Domain.Models;
 using EwuConnect.Domain.Models.Profile;
+using EwuConnect.Domain.Services.Interfaces;
 
 namespace EwuConnect.Domain.Services
 {
-    public class WorkExperienceService
+    //TODO
+    //* 
+    //* Should be made Async
+    //* 
+
+    public class WorkExperienceService : IWorkExperienceService
     {
         private ApplicationDbContext DbContext { get; }
 
@@ -44,7 +50,7 @@ namespace EwuConnect.Domain.Services
             return false;
         }
 
-        public List<WorkExperience> GetEducationForUser(int userId)
+        public List<WorkExperience> GetWorkExperienceForUser(int userId)
         {
             return DbContext.WorkExperience.Where(e => e.UserId == userId).ToList();
         }
