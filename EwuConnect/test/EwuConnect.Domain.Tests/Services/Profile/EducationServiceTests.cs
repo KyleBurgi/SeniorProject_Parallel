@@ -10,7 +10,7 @@ namespace EwuConnect.Domain.Tests.Services.Profile
     public class EducationServiceTests : DatabaseServiceTests
     {
         [TestMethod]
-        public void InitCreate_AddGift_Pass()
+        public void InitCreate_AddEducation_Pass()
         {
             using (ApplicationDbContext context = new ApplicationDbContext(Options))
             {
@@ -23,14 +23,15 @@ namespace EwuConnect.Domain.Tests.Services.Profile
                     LastName = "Burgi"
                 };
 
+                uService.AddUser(user);
+
                 Education edu = new Education
                 {
                     CollegeName = "Eastern Washington University",
-                    YearGraduated = 2020,
-                    FieldOfStudy = "Computer Science"
+                    FieldOfStudy = "Computer Science",
+                    UserId = user.Id
                 };
 
-                uService.AddUser(user);
                 eService.AddEducation(edu);
 
                 Assert.AreNotEqual(0, edu.Id);

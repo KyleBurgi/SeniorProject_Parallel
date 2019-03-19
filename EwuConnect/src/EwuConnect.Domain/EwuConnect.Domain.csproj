@@ -15,6 +15,7 @@
     <Folder Include="Models\Interfaces\" />
     <Folder Include="Services\" />
     <Folder Include="Models\Profile\SkillKeywords\" />
+    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.3" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace EwuConnect.Domain.Models.Profile
@@ -6,11 +7,14 @@ namespace EwuConnect.Domain.Models.Profile
     public class Education
     {
         public int Id { get; set; }
-        [Required]
         public string CollegeName { get; set; }
-        [Required]
         public string FieldOfStudy { get; set; }
         public string LevelOfDegree { get; set; } //Associates, Bachelors, Masters, Doctorate
         public int YearGraduated { get; set; }
+
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 }
+
+

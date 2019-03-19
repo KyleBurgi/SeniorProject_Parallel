@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using EwuConnect.Domain.Models;
 using EwuConnect.Domain.Models.Profile;
+using EwuConnect.Domain.Services.Interfaces;
 
 namespace EwuConnect.Domain.Services
 {
@@ -9,7 +11,8 @@ namespace EwuConnect.Domain.Services
         TODO:
             Async
     */
-    public class EducationService
+
+    public class EducationService : IEducationService
     {
         private ApplicationDbContext DbContext { get; }
 
@@ -24,9 +27,9 @@ namespace EwuConnect.Domain.Services
             DbContext.SaveChanges();
         }
 
-        public Education GetEducation(int id)
+        public Education GetEducation(int educationId)
         {
-            return DbContext.Education.SingleOrDefault(e => e.Id == id);
+            return DbContext.Education.SingleOrDefault(e => e.Id == educationId);
         }
 
         public void UpdateEducation(Education education)
@@ -35,9 +38,9 @@ namespace EwuConnect.Domain.Services
             DbContext.SaveChanges();
         }
 
-        public bool DeleteEducation(int id)
+        public bool DeleteEducation(int educationId)
         {
-            Education grabbedEducation = GetEducation(id);
+            Education grabbedEducation = GetEducation(educationId);
             if(grabbedEducation != null)
             {
                 DbContext.Education.Remove(grabbedEducation);
@@ -45,6 +48,11 @@ namespace EwuConnect.Domain.Services
                 return true;
             }
             return false;
+        }
+
+        public List<Education> GetEducationForUser(int userId)
+        {
+            return DbContext.Education.Where(e => e.UserId == userId).ToList();
         }
     }
 }

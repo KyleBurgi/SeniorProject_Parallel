@@ -11,12 +11,17 @@ namespace EwuConnect.Domain.Models.Profile
         public int Id { get; set; }
 
         //Name
+        [Required]
         public string FirstName { get; set; }
+        [Required]
         public string LastName { get; set; }
         public string NameTitle { get; set; } //Mrs., Mr., Dr., etc...
 
         //Personal Biography
-        public PersonalBiography PersonalBio { get; set; }
+        public string PersonalBio { get; set; }
+
+        //Education
+        public List<Education> EducationHistory { get; set; }
 
         //ContactInfo
         public string Email { get; set; }
@@ -32,15 +37,12 @@ namespace EwuConnect.Domain.Models.Profile
         private List<SkillKeyword> SkillKeywords { get; set; }
 
         //Work History - only for mentors
-        public List<UserWorkExperience> WorkHistory { get; set; }
+        public List<WorkExperience> WorkHistory { get; set; }
 
-        //Education
-        public List<UserEducation> MentorsEducation { get; set; }
     }
 
     public class Mentee : User
     {
-        //Education
-        public List<UserEducation> MenteeEducation { get; set; }
+
     }
 }
