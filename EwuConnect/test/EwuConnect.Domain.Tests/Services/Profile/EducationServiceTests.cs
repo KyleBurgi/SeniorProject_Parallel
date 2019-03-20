@@ -129,6 +129,7 @@ namespace EwuConnect.Domain.Tests.Services.Profile
                 List<Education> userEdcuation = educationService.GetEducationForUser(users[0].Id);
 
                 Assert.AreEqual("Gonzaga University", userEdcuation[0].CollegeName);
+                Assert.AreEqual("Computer Science", users[0].EducationHistory[0].FieldOfStudy);
             }
         }
 
@@ -156,11 +157,16 @@ namespace EwuConnect.Domain.Tests.Services.Profile
                 };
 
                 educationService.AddEducation(edu);
+
+
             }
 
             using (ApplicationDbContext context = new ApplicationDbContext(Options))
             {
                 EducationService educationService = new EducationService(context);
+
+
+
                 educationService.DeleteEducation(1);
             }
 
@@ -173,6 +179,8 @@ namespace EwuConnect.Domain.Tests.Services.Profile
                 List<Education> userEdcuation = educationService.GetEducationForUser(users[0].Id);
 
                 Assert.IsTrue(userEdcuation.Count == 0);
+
+
             }
         }
 

@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{A5A54130-1B63-41C8-B437-6638E7E513BC}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.src.EwuConnect.Api PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.test.EwuConnect.Domain.Tests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Domain/Models/Profile/Message.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/EwuConnect.Domain.Tests/Services/Profile/EducationServiceTests.cs">
     <Files>
       <File FileName="test/EwuConnect.Api.Tests/Controllers/EducationControllerTests.cs" Line="15" Column="11" />
       <File FileName="test/EwuConnect.Domain.Tests/Services/Profile/UserServiceTests.cs" Line="40" Column="22" />
-      <File FileName="src/EwuConnect.Domain/Models/Profile/Message.cs" Line="3" Column="1" />
+      <File FileName="src/EwuConnect.Domain/Models/Forum/Response.cs" Line="1" Column="1" />
+      <File FileName="test/EwuConnect.Domain.Tests/Services/Profile/EducationServiceTests.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,8 +16,15 @@
               <Node name="EwuConnect.Domain" expanded="True">
                 <Node name="Models" expanded="True">
                   <Node name="Forum" expanded="True" />
+                  <Node name="Profile" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="test" expanded="True">
+              <Node name="EwuConnect.Domain.Tests" expanded="True">
+                <Node name="Services" expanded="True">
                   <Node name="Profile" expanded="True">
-                    <Node name="Message.cs" selected="True" />
+                    <Node name="EducationServiceTests.cs" selected="True" />
                   </Node>
                 </Node>
               </Node>
