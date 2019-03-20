@@ -46,3 +46,6 @@
 ## Helpful Links
 - [C# Playlist](https://www.youtube.com/playlist?list=PLaGTKnBCbl7XMZv7VB7IfoZ9ON5HnyORK)
 - [Learn Skills](https://www.pluralsight.com)
+- [Meeting Notes](https://docs.google.com/document/d/1JUqG9qR1wk1RSYyXJ4nKGECLeWDiHfLRCGG1WEUi3QQ/edit)
+- [Coding & Style Document](https://docs.google.com/document/d/13YXsQlKrrU22noi8ST_2S9abacpWZghkIhI8mcgKkII/edit)
+- [System Requirements & Specifications](https://drive.google.com/open?id=1tkCKCHPzsj1DCqGx0q9SY_Tg3aSjBjXGvz-CMKsg-oc)
