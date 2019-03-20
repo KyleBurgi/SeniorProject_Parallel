@@ -12,11 +12,11 @@ namespace EwuConnect.Api.Controllers
     [ApiController]
     public class EducationController : ControllerBase
     {
-        private readonly IEducationService _EducationService;
+        private readonly IEducationService EducationService;
 
         public EducationController(IEducationService educationService)
         {
-            _EducationService = educationService ?? throw new ArgumentNullException(nameof(educationService));
+            EducationService = educationService ?? throw new ArgumentNullException(nameof(educationService));
         }
 
         // GET api/values/5
@@ -27,8 +27,9 @@ namespace EwuConnect.Api.Controllers
             {
                 return NotFound();
             }
-            List<Education> databaseUsers = _EducationService.GetEducationForUser(userId);
+            List<Education> databaseUsers = EducationService.GetEducationForUser(userId);
             return databaseUsers.Select(x => new DTO.Education(x)).ToList();
         }
+
     }
 }

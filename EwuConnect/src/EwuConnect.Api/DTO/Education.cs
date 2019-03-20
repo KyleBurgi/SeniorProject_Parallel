@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace EwuConnect.Api.DTO
 {
     public class Education
@@ -28,6 +30,11 @@ namespace EwuConnect.Api.DTO
             FieldOfStudy = education.FieldOfStudy;
             LevelOfDegree = education.LevelOfDegree;
             YearGraduated = education.YearGraduated;
+        }
+
+        public static implicit operator List<object>(Education v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
