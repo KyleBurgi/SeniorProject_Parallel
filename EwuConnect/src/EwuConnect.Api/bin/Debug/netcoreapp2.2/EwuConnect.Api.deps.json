@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "b36818a78e1460eed609d6d51b385bb3652a4f45"
+    "signature": "4885ed193e6f5ca391f8b6a46091bb485a8916f4"
   },
   "compilationOptions": {
     "defines": [
@@ -26,7 +26,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
-          "Microsoft.NETCore.App": "2.2.0"
+          "Microsoft.NETCore.App": "2.2.0",
+          "Swashbuckle.AspNetCore": "4.0.0"
         },
         "runtime": {
           "EwuConnect.Api.dll": {}
@@ -204,6 +205,71 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0"
+        }
+      },
+      "Swashbuckle.AspNetCore/4.0.0": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "4.0.0",
+          "Swashbuckle.AspNetCore.SwaggerGen": "4.0.0",
+          "Swashbuckle.AspNetCore.SwaggerUI": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/4.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/4.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.2.0",
+          "Swashbuckle.AspNetCore.Swagger": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/4.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Routing": "2.2.0",
+          "Microsoft.AspNetCore.StaticFiles": "2.2.0",
+          "Microsoft.Extensions.FileProviders.Embedded": "2.2.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3275,6 +3341,34 @@
       "sha512": "sha512-548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Zv2JJ6rYyQRJ+K1i4sbpsJXyxHl+uvfj47+OuBZJCXaXlRZR8RYGaCiuh2VvZSfqV8lXuQZ6TeU5+eRrmbv1rA==",
+      "path": "swashbuckle.aspnetcore/4.0.0",
+      "hashPath": "swashbuckle.aspnetcore.4.0.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xsEb+8ivkepf2NdiZdl6u5p2d1O7v0MZTJnfZSWAp1DwKEP1Ci0Erxtn+WOona3nkzec3Si2pp7TCPW+vyumpA==",
+      "path": "swashbuckle.aspnetcore.swagger/4.0.0",
+      "hashPath": "swashbuckle.aspnetcore.swagger.4.0.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mdhbUgG05upDDY21nAAQI3RKHvfecuM2p+ustVecKHcpz9ESqF3SGJrQ4YR8Tes1uLPal25g/kI/FRnhGFSfBg==",
+      "path": "swashbuckle.aspnetcore.swaggergen/4.0.0",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.4.0.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HgPRXWpIdafsiFaWkL72xZPFc+grNSnNJFKHFL6CaVi612TL2UllezP/9UvLI397UgtqYc2AL1j/gbatVFfL6Q==",
+      "path": "swashbuckle.aspnetcore.swaggerui/4.0.0",
+      "hashPath": "swashbuckle.aspnetcore.swaggerui.4.0.0.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

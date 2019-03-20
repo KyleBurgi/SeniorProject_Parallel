@@ -1,24 +1,25 @@
-﻿<Properties StartupConfiguration="{A5A54130-1B63-41C8-B437-6638E7E513BC}|Default">
+﻿<Properties StartupConfiguration="{A5A54130-1B63-41C8-B437-6638E7E513BC}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.src.EwuConnect.Api PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.test.EwuConnect.Domain.Tests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Domain/Services/UserService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Domain/Services/EducationService.cs">
     <Files>
-      <File FileName="src/EwuConnect.Domain/Services/WorkExperienceService.cs" Line="46" Column="10" />
-      <File FileName="src/EwuConnect.Domain/Services/EducationService.cs" Line="53" Column="9" />
-      <File FileName="src/EwuConnect.Domain/Services/UserService.cs" Line="13" Column="9" />
+      <File FileName="src/EwuConnect.Domain/Services/Interfaces/IEducationService.cs" Line="9" Column="9" />
+      <File FileName="src/EwuConnect.Api/Startup.cs" Line="51" Column="30" />
+      <File FileName="src/EwuConnect.Domain/Services/UserService.cs" Line="14" Column="1" />
+      <File FileName="src/EwuConnect.Domain/Services/EducationService.cs" Line="15" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="EwuConnect" expanded="True">
             <Node name="src" expanded="True">
+              <Node name="EwuConnect.Api" expanded="True">
+                <Node name="Controllers" expanded="True" />
+              </Node>
               <Node name="EwuConnect.Domain" expanded="True">
-                <Node name="Models" expanded="True">
-                  <Node name="Profile" expanded="True" />
-                </Node>
                 <Node name="Services" expanded="True">
                   <Node name="Interfaces" expanded="True" />
-                  <Node name="UserService.cs" selected="True" />
+                  <Node name="EducationService.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
