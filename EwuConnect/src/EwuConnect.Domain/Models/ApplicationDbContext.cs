@@ -1,4 +1,5 @@
 ﻿using System;
+using EwuConnect.Domain.Models.Forum;
 using EwuConnect.Domain.Models.Profile;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,8 @@ namespace EwuConnect.Domain.Models
         public DbSet<Mentee> Mentees { get; set; }
         public DbSet<Mentor> Mentors { get; set; }
         public DbSet<WorkExperience> WorkExperience { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Response> Responses { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
