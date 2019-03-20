@@ -12,3 +12,6 @@
 /Users/kyleburgi/Desktop/SeniorProject/Parallel_EwuConnect/Parallel_EwuConnect/EwuConnect/src/EwuConnect.Api/obj/Debug/netcoreapp2.2/EwuConnect.Api.dll
 /Users/kyleburgi/Desktop/SeniorProject/Parallel_EwuConnect/Parallel_EwuConnect/EwuConnect/src/EwuConnect.Api/obj/Debug/netcoreapp2.2/EwuConnect.Api.pdb
 /Users/kyleburgi/Desktop/SeniorProject/Parallel_EwuConnect/Parallel_EwuConnect/EwuConnect/src/EwuConnect.Api/obj/Debug/netcoreapp2.2/EwuConnect.Api.csprojAssemblyReference.cache
+/Users/kyleburgi/Desktop/SeniorProject/Parallel_EwuConnect/Parallel_EwuConnect/EwuConnect/src/EwuConnect.Api/bin/Debug/netcoreapp2.2/EwuConnect.Domain.dll
+/Users/kyleburgi/Desktop/SeniorProject/Parallel_EwuConnect/Parallel_EwuConnect/EwuConnect/src/EwuConnect.Api/bin/Debug/netcoreapp2.2/EwuConnect.Domain.pdb
+/Users/kyleburgi/Desktop/SeniorProject/Parallel_EwuConnect/Parallel_EwuConnect/EwuConnect/src/EwuConnect.Api/obj/Debug/netcoreapp2.2/EwuConnect.Api.csproj.CopyComplete

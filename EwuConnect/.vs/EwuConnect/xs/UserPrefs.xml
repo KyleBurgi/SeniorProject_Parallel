@@ -1,12 +1,21 @@
 ﻿<Properties StartupConfiguration="{A5A54130-1B63-41C8-B437-6638E7E513BC}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.src.EwuConnect.Api PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.test.EwuConnect.Domain.Tests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Domain/Services/EducationService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../../Library/Frameworks/Mono.framework/Versions/5.16.1/lib/mono/msbuild/15.0/bin/Microsoft.Common.CurrentVersion.targets">
     <Files>
       <File FileName="src/EwuConnect.Domain/Services/Interfaces/IEducationService.cs" Line="9" Column="9" />
-      <File FileName="src/EwuConnect.Api/Startup.cs" Line="51" Column="30" />
+      <File FileName="src/EwuConnect.Api/Startup.cs" Line="39" Column="13" />
       <File FileName="src/EwuConnect.Domain/Services/UserService.cs" Line="14" Column="1" />
       <File FileName="src/EwuConnect.Domain/Services/EducationService.cs" Line="15" Column="5" />
+      <File FileName="test/EwuConnect.Domain.Tests/Services/Profile/EducationServiceTests.cs" Line="175" Column="57" />
+      <File FileName="src/EwuConnect.Api/Controllers/EducationController.cs" Line="27" Column="14" />
+      <File FileName="src/EwuConnect.Api/Controllers/ValuesController.cs" Line="41" Column="37" />
+      <File FileName="src/EwuConnect.Api/DTO/Education.cs" Line="3" Column="2" />
+      <File FileName="src/EwuConnect.Domain/Models/Profile/Education.cs" Line="9" Column="9" />
+      <File FileName="src/EwuConnect.Domain/Models/ApplicationDbContext.cs" Line="17" Column="38" />
+      <File FileName="test/EwuConnect.Api.Tests/Controllers/EducationControllerTests.cs" Line="17" Column="8" />
+      <File FileName="test/EwuConnect.Api.Tests/TestableServices/TestableEducationService.cs" Line="31" Column="29" />
+      <File FileName="../../../../../../../Library/Frameworks/Mono.framework/Versions/5.16.1/lib/mono/msbuild/15.0/bin/Microsoft.Common.CurrentVersion.targets" Line="2130" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,15 +24,16 @@
             <Node name="src" expanded="True">
               <Node name="EwuConnect.Api" expanded="True">
                 <Node name="Controllers" expanded="True" />
-              </Node>
-              <Node name="EwuConnect.Domain" expanded="True">
-                <Node name="Services" expanded="True">
-                  <Node name="Interfaces" expanded="True" />
-                  <Node name="EducationService.cs" selected="True" />
-                </Node>
+                <Node name="DTO" expanded="True" />
               </Node>
             </Node>
             <Node name="test" expanded="True">
+              <Node name="EwuConnect.Api.Tests" expanded="True">
+                <Node name="Controllers" expanded="True">
+                  <Node name="EducationControllerTests.cs" selected="True" />
+                </Node>
+                <Node name="TestableServices" expanded="True" />
+              </Node>
               <Node name="EwuConnect.Domain.Tests" expanded="True">
                 <Node name="Services" expanded="True">
                   <Node name="Profile" expanded="True" />
@@ -37,17 +47,7 @@
         <State name="__root__">
           <Node name="EwuConnect" expanded="True">
             <Node name="test" expanded="True">
-              <Node name="EwuConnect.Domain.Tests" expanded="True">
-                <Node name="EwuConnect" expanded="True">
-                  <Node name="Domain" expanded="True">
-                    <Node name="Tests" expanded="True">
-                      <Node name="Services" expanded="True">
-                        <Node name="EducationServiceTests" selected="True" />
-                      </Node>
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
+              <Node name="EwuConnect.Api.Tests" selected="True" />
             </Node>
           </Node>
         </State>

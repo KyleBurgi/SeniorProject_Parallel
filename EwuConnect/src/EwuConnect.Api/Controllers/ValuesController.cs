@@ -19,7 +19,7 @@ namespace EwuConnect.Api.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<string> Get(int userId)
         {
             return "value";
         }
@@ -38,7 +38,7 @@ namespace EwuConnect.Api.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(int userId)
         {
         }
     }
