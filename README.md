@@ -6,6 +6,7 @@
 # Overall
 - Continue working on OVERALL
 	- Make the app async as to avoid conflicts during database use
+	- Make sure exceptions are thrown in their specific situations and scenarios
 
 # EwuConnect.Domain
 - Continue working on EwuConnect.Domain
