@@ -12,7 +12,6 @@
     <Folder Include="Models\Profile\" />
     <Folder Include="Models\Forum\" />
     <Folder Include="Models\Chat\" />
-    <Folder Include="Models\Interfaces\" />
     <Folder Include="Services\" />
     <Folder Include="Models\Profile\SkillKeywords\" />
     <Folder Include="Services\Interfaces\" />

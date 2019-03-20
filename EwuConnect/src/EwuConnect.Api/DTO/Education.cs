@@ -31,10 +31,5 @@ namespace EwuConnect.Api.DTO
             LevelOfDegree = education.LevelOfDegree;
             YearGraduated = education.YearGraduated;
         }
-
-        public static implicit operator List<object>(Education v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

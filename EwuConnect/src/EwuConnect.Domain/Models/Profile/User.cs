@@ -15,7 +15,7 @@ namespace EwuConnect.Domain.Models.Profile
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
-        public string NameTitle { get; set; } //Mrs., Mr., Dr., etc...
+        public string NameTitle { get; set; }
 
         //Personal Biography
         public string PersonalBio { get; set; }

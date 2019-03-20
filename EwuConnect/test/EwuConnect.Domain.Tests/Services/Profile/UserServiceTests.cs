@@ -22,6 +22,26 @@ namespace EwuConnect.Domain.Tests.Services.Profile
         }
 
 
+        [TestMethod]
+        public void AlexCheck()
+        {
+            User u = new User { FirstName = "Alex", LastName = "Tonyson" };
+
+            using (var context = new ApplicationDbContext(Options))
+            {
+                UserService service = new UserService(context);
+                service.AddUser(u);
+            }
+
+            using (var context = new ApplicationDbContext(Options))
+            {
+                UserService service = new UserService(context);
+
+                User uAlex = service.GetUser(1);
+                Assert.AreEqual(1, uAlex.Id);
+            }
+
+        }
         /*ADD*/
         [TestMethod]
         public void AddUser_RequiredInfo_Pass()

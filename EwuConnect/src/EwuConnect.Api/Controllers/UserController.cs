@@ -16,6 +16,8 @@ namespace EwuConnect.Api.Controllers
             UserService = userService ?? throw new ArgumentNullException(nameof(userService));
         }
 
+        //TODO: FIX THIS CODE
+
         /*
         // POST api/<controller>
         [HttpPost]
@@ -28,7 +30,7 @@ namespace EwuConnect.Api.Controllers
 
             UserService.AddUser(user);
 
-            return user;
+            return Ok();
         }
         */
 
@@ -53,6 +55,25 @@ namespace EwuConnect.Api.Controllers
             UserService.UpdateUser(foundUser);
 
             return user;
+        }
+        */
+
+        /*
+        // GET api/<controller>/1
+        [HttpGet("{userId}")]
+        public ActionResult<User> Get(int userId)
+        {
+            if (userId < 0)
+            {
+                return BadRequest();
+            }
+            User foundUser = UserService.GetUser(userId);
+
+            if (foundUser == null)
+            {
+                return NotFound();
+            }
+            return foundUser;
         }
         */
 

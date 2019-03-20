@@ -1,31 +1,54 @@
 ﻿<Properties StartupConfiguration="{A5A54130-1B63-41C8-B437-6638E7E513BC}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.src.EwuConnect.Api PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.test.EwuConnect.Domain.Tests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Api/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Domain/Models/Profile/Message.cs">
     <Files>
-      <File FileName="src/EwuConnect.Api/Controllers/EducationController.cs" Line="25" Column="28" />
-      <File FileName="src/EwuConnect.Api/Controllers/WorkExperienceController.cs" Line="1" Column="1" />
-      <File FileName="src/EwuConnect.Api/Controllers/UserController.cs" Line="33" Column="11" />
-      <File FileName="src/EwuConnect.Api/Startup.cs" Line="46" Column="13" />
+      <File FileName="test/EwuConnect.Api.Tests/Controllers/EducationControllerTests.cs" Line="15" Column="11" />
+      <File FileName="test/EwuConnect.Domain.Tests/Services/Profile/UserServiceTests.cs" Line="40" Column="22" />
+      <File FileName="src/EwuConnect.Domain/Models/Profile/Message.cs" Line="3" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="EwuConnect" expanded="True">
             <Node name="src" expanded="True">
-              <Node name="EwuConnect.Api" expanded="True">
-                <Node name="Controllers" expanded="True" />
-                <Node name="DTO" expanded="True" />
-                <Node name="Properties" expanded="True" />
-                <Node name="Startup.cs" selected="True" />
+              <Node name="EwuConnect.Domain" expanded="True">
+                <Node name="Models" expanded="True">
+                  <Node name="Forum" expanded="True" />
+                  <Node name="Profile" expanded="True">
+                    <Node name="Message.cs" selected="True" />
+                  </Node>
+                </Node>
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="EwuConnect" expanded="True" selected="True" />
+          <Node name="EwuConnect" expanded="True">
+            <Node name="test" expanded="True">
+              <Node name="EwuConnect.Domain.Tests" expanded="True">
+                <Node name="EwuConnect" expanded="True">
+                  <Node name="Domain" expanded="True">
+                    <Node name="Tests" expanded="True">
+                      <Node name="Services" expanded="True">
+                        <Node name="Profile" expanded="True">
+                          <Node name="EducationServiceTests" expanded="True" />
+                          <Node name="UserServiceTests" expanded="True">
+                            <Node name="AlexCheck" selected="True" />
+                          </Node>
+                        </Node>
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
