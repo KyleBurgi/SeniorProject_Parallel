@@ -34,7 +34,7 @@ namespace EwuConnect.Domain.Services
                 .SingleOrDefault(u => u.Id == id);
         }
 
-        public List<Post> GetBatchPosts()   //Figure out how we want to implement
+        public List<Post> GetBatchPost()   //Figure out how we want to implement
         {
             return null;
         }
@@ -51,5 +51,6 @@ namespace EwuConnect.Domain.Services
             }
             return false;
         }
+
     }
 }

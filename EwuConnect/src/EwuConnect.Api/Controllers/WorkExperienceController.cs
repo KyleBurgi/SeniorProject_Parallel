@@ -12,10 +12,9 @@ namespace EwuConnect.Api.Controllers
     public class WorkExperienceController : ControllerBase
     {
         private readonly IWorkExperienceService WorkExperienceService;
-
-        public WorkExperienceController(IWorkExperienceService WorkExperienceService)
+        public WorkExperienceController(IWorkExperienceService workExperienceService)
         {
-            WorkExperienceService = WorkExperienceService ?? throw new ArgumentNullException(nameof(WorkExperienceService));
+            WorkExperienceService = workExperienceService ?? throw new ArgumentNullException(nameof(workExperienceService));
         }
 
         // GET api/values/5
