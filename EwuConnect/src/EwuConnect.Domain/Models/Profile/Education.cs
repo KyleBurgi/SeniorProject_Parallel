@@ -9,7 +9,7 @@ namespace EwuConnect.Domain.Models.Profile
         public int Id { get; set; }
         public string CollegeName { get; set; }
         public string FieldOfStudy { get; set; }
-        public string LevelOfDegree { get; set; } //Associates, Bachelors, Masters, Doctorate
+        public string LevelOfDegree { get; set; }
         public int YearGraduated { get; set; }
 
         public int UserId { get; set; }

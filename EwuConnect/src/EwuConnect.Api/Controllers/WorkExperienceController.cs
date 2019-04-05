@@ -28,5 +28,34 @@ namespace EwuConnect.Api.Controllers
             List<WorkExperience> databaseUsers = WorkExperienceService.GetWorkExperienceForUser(userId);
             return databaseUsers.Select(x => new DTO.WorkExperience(x)).ToList();
         }
+
+        /*
+        [HttpGet("{workExperienceId")]
+        public ActionResult<DTO.WorkExperience> GetSingleWorkExperience(int workExperienceId)
+        { 
+            if (workExperienceId < 0)
+            {
+                return NotFound();
+            }
+
+            WorkExperience foundWork = WorkExperienceService.GetWorkExperience(workExperienceId);
+
+            return new DTO.WorkExperience(foundWork);
+        }
+        */
+        /*
+        [HttpPost]
+        public ActionResult PostWorkExperience(WorkExperience workExperience)
+        {
+            if(workExperience == null)
+            {
+                return BadRequest();
+            }
+            WorkExperienceService.AddWorkExperience(workExperience);
+
+            return Ok();
+
+        }
+        */
     }
 }

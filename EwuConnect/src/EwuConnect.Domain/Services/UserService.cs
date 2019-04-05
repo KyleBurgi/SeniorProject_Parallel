@@ -20,6 +20,8 @@ namespace EwuConnect.Domain.Services
         public UserService(ApplicationDbContext dbContext)
         {
             DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+
+
         }
 
         public void AddUser(User user)

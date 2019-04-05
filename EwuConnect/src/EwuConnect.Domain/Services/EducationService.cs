@@ -10,6 +10,7 @@ namespace EwuConnect.Domain.Services
     //TODO
     //* 
     //* Should be made Async
+    //* Exceptions
     //* 
 
     public class EducationService : IEducationService

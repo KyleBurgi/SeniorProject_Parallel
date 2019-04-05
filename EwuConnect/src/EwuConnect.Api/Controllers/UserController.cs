@@ -63,6 +63,11 @@ namespace EwuConnect.Api.Controllers
         [HttpGet("{userId}")]
         public ActionResult<User> Get(int userId)
         {
+
+            
+
+
+
             if (userId < 0)
             {
                 return BadRequest();
