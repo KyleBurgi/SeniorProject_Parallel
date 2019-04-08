@@ -1,4 +1,5 @@
-﻿using EwuConnect.Domain.Models;
+﻿using AutoMapper;
+using EwuConnect.Domain.Models;
 using EwuConnect.Domain.Services;
 using EwuConnect.Domain.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
@@ -29,6 +30,7 @@ namespace EwuConnect.Api
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IEducationService, EducationService>();
             services.AddScoped<IWorkExperienceService, WorkExperienceService>();
+            services.AddAutoMapper();
 
             var connection = new SqliteConnection("DataSource=:memory:");
             connection.Open();

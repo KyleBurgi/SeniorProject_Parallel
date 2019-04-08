@@ -7,7 +7,7 @@ namespace EwuConnect.Domain.Services.Interfaces
     public interface IEducationService
     {
         /*CRUD*/
-        void AddEducation(Education education);
+        Education AddEducation(Education education);
         void UpdateEducation(Education education);
         Education GetEducation(int educationId);
         bool DeleteEducation(int educationId);

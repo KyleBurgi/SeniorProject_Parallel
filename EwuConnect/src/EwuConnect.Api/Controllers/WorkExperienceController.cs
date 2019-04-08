@@ -9,14 +9,14 @@ namespace EwuConnect.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class WorkExperienceController : ControllerBase
+    public class WorkExperienceController : Controller
     {
         private readonly IWorkExperienceService WorkExperienceService;
         public WorkExperienceController(IWorkExperienceService workExperienceService)
         {
             WorkExperienceService = workExperienceService ?? throw new ArgumentNullException(nameof(workExperienceService));
         }
-
+        /*
         // GET api/values/5
         [HttpGet("{userId}")]
         public ActionResult<List<DTO.WorkExperience>> GetWorkExperienceForUser(int userId)
@@ -28,7 +28,7 @@ namespace EwuConnect.Api.Controllers
             List<WorkExperience> databaseUsers = WorkExperienceService.GetWorkExperienceForUser(userId);
             return databaseUsers.Select(x => new DTO.WorkExperience(x)).ToList();
         }
-
+        */
         /*
         [HttpGet("{workExperienceId")]
         public ActionResult<DTO.WorkExperience> GetSingleWorkExperience(int workExperienceId)

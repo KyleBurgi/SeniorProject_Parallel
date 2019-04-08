@@ -11,12 +11,11 @@ namespace EwuConnect.Domain.Models.Profile
         public int Id { get; set; }
 
         //Name
-        [Required]
         public string FirstName { get; set; }
-        [Required]
         public string LastName { get; set; }
         public string NameTitle { get; set; }
 
+        /*
         //Personal Biography
         public string PersonalBio { get; set; }
 
@@ -28,6 +27,7 @@ namespace EwuConnect.Domain.Models.Profile
         public string PhoneNumber { get; set; }
         public string State { get; set; }
         public string City { get; set; }
+        */
 
     }
 

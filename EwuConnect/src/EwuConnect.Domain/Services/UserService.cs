@@ -24,10 +24,12 @@ namespace EwuConnect.Domain.Services
 
         }
 
-        public void AddUser(User user)
+        public User AddUser(User user)
         {
             DbContext.Users.Add(user);
             DbContext.SaveChanges();
+
+            return user;
         }
 
         public void UpdateUser(User user)
@@ -42,7 +44,7 @@ namespace EwuConnect.Domain.Services
                 .SingleOrDefault(u => u.Id == id);
         }
 
-        public List<User> GetBatchUsers()
+        public List<User> FetchAllUsers()
         {
             return DbContext.Users.ToList();
         }

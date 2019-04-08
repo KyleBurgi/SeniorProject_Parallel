@@ -22,10 +22,12 @@ namespace EwuConnect.Domain.Services
             DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public void AddEducation(Education education) 
+        public Education AddEducation(Education education) 
         {
             DbContext.Education.Add(education);
             DbContext.SaveChanges();
+
+            return education;
         }
 
         public Education GetEducation(int educationId)
