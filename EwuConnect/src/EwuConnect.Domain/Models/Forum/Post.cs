@@ -18,5 +18,6 @@ namespace EwuConnect.Domain.Models.Forum
         public string Content { get; set; }
         public List<Response> Responses { get; set; }
         public bool IsViewable { get; set; }
+        public string Title { get; set; }
     }
 }

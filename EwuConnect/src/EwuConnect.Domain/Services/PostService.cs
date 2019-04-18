@@ -16,10 +16,11 @@ namespace EwuConnect.Domain.Services
             DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public void AddPost(Post post)
+        public Post AddPost(Post post)
         {
             DbContext.Posts.Add(post);
             DbContext.SaveChanges();
+            return post;
         }
 
         public void UpdatePost(Post post)
@@ -28,15 +29,19 @@ namespace EwuConnect.Domain.Services
             DbContext.SaveChanges();
         }
 
-        public Post GetPost(int id)
+        public Post GetPost_Id(int id)
         {
             return DbContext.Posts
-                .SingleOrDefault(u => u.Id == id);
+                .SingleOrDefault(p => p.Id == id);
+        }
+        public List<Post> GetPost_UserId(int userId)
+        {
+            return DbContext.Posts.Where(p => p.UserId == userId).ToList();
         }
 
-        public List<Post> GetBatchPost()   //Figure out how we want to implement
+        public List<Post> GetBatchPosts()   //Figure out how we want to implement
         {
-            return null;
+            return DbContext.Posts.ToList();
         }
 
         public bool DeletePost(int id)
@@ -51,6 +56,7 @@ namespace EwuConnect.Domain.Services
             }
             return false;
         }
+
 
     }
 }

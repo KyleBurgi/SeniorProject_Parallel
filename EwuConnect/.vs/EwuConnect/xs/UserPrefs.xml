@@ -1,30 +1,15 @@
 ﻿<Properties StartupConfiguration="{A5A54130-1B63-41C8-B437-6638E7E513BC}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.src.EwuConnect.Api PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.test.EwuConnect.Domain.Tests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Api/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Domain/Services/ResponseService.cs">
     <Files>
-      <File FileName="src/EwuConnect.Api/Controllers/EducationController.cs" Line="72" Column="40" />
-      <File FileName="src/EwuConnect.Api/Controllers/UserController.cs" Line="14" Column="45" />
-      <File FileName="src/EwuConnect.Domain/Services/EducationService.cs" Line="30" Column="30" />
-      <File FileName="src/EwuConnect.Domain/Services/Interfaces/IEducationService.cs" Line="10" Column="18" />
-      <File FileName="src/EwuConnect.Domain/Services/Interfaces/IPostService.cs" Line="1" Column="1" />
-      <File FileName="src/EwuConnect.Domain/Models/Profile/Education.cs" Line="15" Column="9" />
-      <File FileName="src/EwuConnect.Domain/Models/Profile/User.cs" Line="17" Column="1" />
-      <File FileName="src/EwuConnect.Api/ViewModels/UserViewModel.cs" Line="15" Column="6" />
-      <File FileName="src/EwuConnect.Domain/Models/Profile/MentorMenteePairing.cs" Line="1" Column="1" />
-      <File FileName="src/EwuConnect.Domain/Models/Profile/Message.cs" Line="1" Column="1" />
-      <File FileName="src/EwuConnect.Api/Models/AutoMapperProfileConfiguration.cs" Line="16" Column="56" />
-      <File FileName="src/EwuConnect.Api/Models/CurrentDirectoryHelpers.cs" Line="4" Column="26" />
-      <File FileName="src/EwuConnect.Api/appsettings.Development.json" Line="9" Column="51" />
-      <File FileName="src/EwuConnect.Api/appsettings.json" Line="26" Column="3" />
-      <File FileName="src/EwuConnect.Api/Program.cs" Line="67" Column="19" />
-      <File FileName="src/EwuConnect.Api/ViewModels/UserInputViewModel.cs" Line="10" Column="45" />
-      <File FileName="src/EwuConnect.Api/ViewModels/WorkExperienceViewModel.cs" Line="7" Column="9" />
-      <File FileName="src/EwuConnect.Api/ViewModels/EducationInputViewModel.cs" Line="8" Column="15" />
-      <File FileName="src/EwuConnect.Api/ViewModels/EducationViewModel.cs" Line="7" Column="6" />
-      <File FileName="src/EwuConnect.Api/ViewModels/WorkExperienceInputViewModel.cs" Line="8" Column="16" />
-      <File FileName="src/EwuConnect.Api/Controllers/WorkExperienceController.cs" Line="12" Column="55" />
-      <File FileName="src/EwuConnect.Api/Startup.cs" Line="1" Column="1" />
+      <File FileName="src/EwuConnect.Api/Models/AutoMapperProfileConfiguration.cs" Line="27" Column="39" />
+      <File FileName="src/EwuConnect.Api/Controllers/PostController.cs" Line="101" Column="12" />
+      <File FileName="src/EwuConnect.Api/Controllers/UserController.cs" Line="1" Column="1" />
+      <File FileName="src/EwuConnect.Api/Controllers/ResponseController.cs" Line="99" Column="78" />
+      <File FileName="src/EwuConnect.Domain/Services/ResponseService.cs" Line="58" Column="13" />
+      <File FileName="src/EwuConnect.Domain/Services/Interfaces/IResponseService.cs" Line="14" Column="43" />
+      <File FileName="src/EwuConnect.Domain/Services/PostService.cs" Line="42" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -32,23 +17,18 @@
           <Node name="EwuConnect" expanded="True">
             <Node name="src" expanded="True">
               <Node name="EwuConnect.Api" expanded="True">
-                <Node name="Dependencies" expanded="True">
-                  <Node name="PackageDependencies" expanded="True" />
-                </Node>
                 <Node name="Controllers" expanded="True" />
-                <Node name="Models" expanded="True" />
                 <Node name="ViewModels" expanded="True" />
-                <Node name="Startup.cs" selected="True" />
               </Node>
               <Node name="EwuConnect.Domain" expanded="True">
                 <Node name="Models" expanded="True">
                   <Node name="Forum" expanded="True" />
-                  <Node name="Profile" expanded="True" />
+                </Node>
+                <Node name="Services" expanded="True">
+                  <Node name="Interfaces" expanded="True" />
+                  <Node name="ResponseService.cs" selected="True" />
                 </Node>
               </Node>
-            </Node>
-            <Node name="test" expanded="True">
-              <Node name="EwuConnect.Domain.Tests" expanded="True" />
             </Node>
           </Node>
         </State>

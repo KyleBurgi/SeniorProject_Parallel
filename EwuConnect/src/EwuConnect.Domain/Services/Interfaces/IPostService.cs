@@ -5,10 +5,11 @@ namespace EwuConnect.Domain.Services.Interfaces
 { 
     public interface IPostService
     {
-        void AddPost(Post post);
+        Post AddPost(Post post);
         void UpdatePost(Post post);
-        Post GetPost(int id);
-        List<Post> GetBatchPost();
+        Post GetPost_Id(int id);
+        List<Post> GetPost_UserId(int user_id);
+        List<Post> GetBatchPosts();
         bool DeletePost(int id);
     }
 }

@@ -16,22 +16,28 @@ namespace EwuConnect.Domain.Services
             DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public void AddResponse(Response post)
+        public Response AddResponse(Response response)
         {
-            DbContext.Responses.Add(post);
+            DbContext.Responses.Add(response);
+            DbContext.SaveChanges();
+            return response;
+        }
+
+        public void UpdateResponse(Response response)
+        {
+            DbContext.Responses.Update(response);
             DbContext.SaveChanges();
         }
 
-        public void UpdateResponse(Response post)
-        {
-            DbContext.Responses.Update(post);
-            DbContext.SaveChanges();
-        }
-
-        public Response GetResponse(int id)
+        public Response GetResponse_Id(int id)
         {
             return DbContext.Responses
-                .SingleOrDefault(u => u.Id == id);
+                .SingleOrDefault(r => r.Id == id);
+        }
+
+        public List<Response> GetResponse_PostId(int postId)
+        {
+            return DbContext.Responses.Where(r => r.Id == postId).ToList();
         }
 
         public bool DeleteResponse(int id)
@@ -45,6 +51,12 @@ namespace EwuConnect.Domain.Services
                 return true;
             }
             return false;
+        }
+
+        public List<Response> GetBatchResponse()
+        {
+            return DbContext.Responses.ToList();
+
         }
     }
 }

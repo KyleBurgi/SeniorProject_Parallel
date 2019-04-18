@@ -6,9 +6,11 @@ namespace EwuConnect.Domain.Services.Interfaces
 {
     public interface IResponseService
     {
-        void AddResponse(Response response);
+        Response AddResponse(Response response);
         void UpdateResponse(Response response);
-        Response GetResponse(int id);
+        Response GetResponse_Id(int id);
+        List<Response> GetResponse_PostId(int post_id);
         bool DeleteResponse(int id);
+        List<Response> GetBatchResponse();
     }   
 }

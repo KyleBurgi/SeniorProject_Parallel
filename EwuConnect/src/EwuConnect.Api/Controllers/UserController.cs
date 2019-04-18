@@ -58,6 +58,22 @@ namespace EwuConnect.Api.Controllers
                 Mapper.Map<UserViewModel>(createdUser));
         }
 
+        [HttpPut]
+        public ActionResult<UserViewModel> UpdateUser(UserUpdateViewModel updateViewModel)
+        {
+            if(updateViewModel == null)
+            {
+                return BadRequest();
+            }
+
+            User foundUser = UserService.GetUser(updateViewModel.Id);
+
+            UserService.UpdateUser(Mapper.Map<User>(updateViewModel));
+
+
+            return null;
+        }
+
         // DELETE api/<controller>/5
         [HttpDelete("user/{userId}")]
         public ActionResult Delete(int userId)
