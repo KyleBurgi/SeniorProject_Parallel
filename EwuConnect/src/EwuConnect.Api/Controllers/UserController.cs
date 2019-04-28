@@ -6,6 +6,7 @@ using EwuConnect.Api.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace EwuConnect.Api.Controllers
 {
@@ -26,16 +27,16 @@ namespace EwuConnect.Api.Controllers
         //TODO: ASYNC
 
         [HttpGet]
-        public ActionResult<ICollection<UserViewModel>> GetAllUsers()
+        public async Task<ActionResult<ICollection<UserViewModel>>> GetAllUsers()
         {
-            var users = UserService.FetchAllUsers();
+            var users = await UserService.FetchAllUsers();
             return Ok(users.Select(x => Mapper.Map<UserViewModel>(x)));
         }
 
         [HttpGet("user/{id}")]
-        public ActionResult<ICollection<UserViewModel>> GetUser(int id)
+        public async Task<ActionResult<ICollection<UserViewModel>>> GetUser(int id)
         {
-            var fetchedUser = UserService.GetUser(id);
+            var fetchedUser = await UserService.GetUser(id);
             if(fetchedUser == null)
             {
                 return NotFound();
@@ -44,14 +45,14 @@ namespace EwuConnect.Api.Controllers
         }
 
         [HttpPost]
-        public ActionResult<UserViewModel> CreateUser(UserInputViewModel viewModel)
+        public async Task<ActionResult<UserViewModel>> CreateUser(UserInputViewModel viewModel)
         { 
-            if(viewModel == null)
+            if(User == null)
             {
                 return BadRequest();
             }
 
-            User createdUser = UserService.AddUser(Mapper.Map<User>(viewModel));
+            User createdUser = await UserService.AddUser(Mapper.Map<User>(viewModel));
 
             return CreatedAtAction(nameof(GetUser), 
                 new { id = createdUser.Id }, 
@@ -59,26 +60,35 @@ namespace EwuConnect.Api.Controllers
         }
 
         [HttpPut]
-        public ActionResult<UserViewModel> UpdateUser(UserUpdateViewModel updateViewModel)
+        public async Task<ActionResult<UserViewModel>> UpdateUser(UserUpdateViewModel updateViewModel)
         {
             if(updateViewModel == null)
             {
                 return BadRequest();
             }
 
-            User foundUser = UserService.GetUser(updateViewModel.Id);
+            User foundUser = await UserService.GetUser(updateViewModel.Id);
 
-            UserService.UpdateUser(Mapper.Map<User>(updateViewModel));
+            if (foundUser == null)
+            {
+                return NotFound();
+            }
 
-
-            return null;
+            Mapper.Map(updateViewModel, foundUser);
+            await UserService.UpdateUser(foundUser);
+            return NoContent();
         }
 
         // DELETE api/<controller>/5
         [HttpDelete("user/{userId}")]
-        public ActionResult Delete(int userId)
+        public async Task<ActionResult> Delete(int userId)
         {
-            bool userWasDeleted = UserService.DeleteUser(userId);
+            if (userId <= 0)
+            {
+                return BadRequest("A UserId must be specificed");
+            }
+
+            bool userWasDeleted = await UserService.DeleteUser(userId);
             return userWasDeleted ? (ActionResult)Ok() : (ActionResult)NotFound();
         }
 
