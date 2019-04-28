@@ -16,6 +16,7 @@ namespace EwuConnect.Domain.Models.Profile
         public string NameTitle { get; set; }
 
 
+        //TODO MOVE ALL THIS TO ITS OWN TABLE
         //Personal Biography
         public string PersonalBio { get; set; }
 

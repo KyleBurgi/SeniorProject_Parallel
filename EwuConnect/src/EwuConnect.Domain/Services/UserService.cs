@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using EwuConnect.Domain.Models;
 using EwuConnect.Domain.Models.Profile;
 using EwuConnect.Domain.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace EwuConnect.Domain.Services
 {
@@ -20,43 +22,40 @@ namespace EwuConnect.Domain.Services
         public UserService(ApplicationDbContext dbContext)
         {
             DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
-
-
         }
 
-        public User AddUser(User user)
+        public async Task<User> AddUser(User user)
         {
             DbContext.Users.Add(user);
-            DbContext.SaveChanges();
-
+            await DbContext.SaveChangesAsync();
             return user;
         }
 
-        public void UpdateUser(User user)
+        public async Task<User> UpdateUser(User user)
         {
             DbContext.Users.Update(user);
-            DbContext.SaveChanges();
+            await DbContext.SaveChangesAsync();
+            return user;
         }
 
-        public User GetUser(int id) 
+        public async Task<User> GetUser(int id) 
         {
-            return DbContext.Users
-                .SingleOrDefault(u => u.Id == id);
+            return await DbContext.Users.FindAsync(id);
         }
 
-        public List<User> FetchAllUsers()
+        public async Task<List<User>> FetchAllUsers()
         {
-            return DbContext.Users.ToList();
+            return await DbContext.Users.ToListAsync();
         }
 
-        public bool DeleteUser(int id)
+        public async Task<bool> DeleteUser(int id)
         {
             User foundUser = DbContext.Users.Find(id);
 
             if(foundUser != null)
             {
                 DbContext.Users.Remove(foundUser);
-                DbContext.SaveChanges();
+                await DbContext.SaveChangesAsync();
                 return true;
             }
             return false;

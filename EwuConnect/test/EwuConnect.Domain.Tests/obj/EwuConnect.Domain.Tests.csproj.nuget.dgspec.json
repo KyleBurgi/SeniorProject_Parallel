@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Domain.Tests\\EwuConnect.Domain.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj",
+        "projectName": "EwuConnect.Domain",
+        "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj",
+        "packagesPath": "C:\\Users\\Kyle Burgi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kyle Burgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Domain.Tests\\EwuConnect.Domain.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Domain.Tests\\EwuConnect.Domain.Tests.csproj",
+        "projectName": "EwuConnect.Domain.Tests",
+        "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Domain.Tests\\EwuConnect.Domain.Tests.csproj",
+        "packagesPath": "C:\\Users\\Kyle Burgi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Domain.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kyle Burgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj": {
+                "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[1.3.2, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[1.3.2, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[15.9.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

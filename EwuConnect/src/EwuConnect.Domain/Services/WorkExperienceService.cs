@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using EwuConnect.Domain.Models;
 using EwuConnect.Domain.Models.Profile;
 using EwuConnect.Domain.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace EwuConnect.Domain.Services
 {
@@ -21,38 +23,43 @@ namespace EwuConnect.Domain.Services
             DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public void AddWorkExperience(WorkExperience workExperience)
+        public async Task<WorkExperience> AddWorkExperience(WorkExperience workExperience)
         {
             DbContext.WorkExperience.Add(workExperience);
-            DbContext.SaveChanges();
+            await DbContext.SaveChangesAsync();
+            return workExperience;
         }
 
-        public WorkExperience GetWorkExperience(int id)
+        public async Task<WorkExperience> GetWorkExperience(int id)
         {
-            return DbContext.WorkExperience.SingleOrDefault(e => e.Id == id);
+            return await DbContext.WorkExperience.FindAsync(id);
+                
         }
 
-        public void UpdateWorkExperience(WorkExperience workExperience)
+        public async Task<WorkExperience> UpdateWorkExperience(WorkExperience workExperience)
         {
             DbContext.WorkExperience.Update(workExperience);
-            DbContext.SaveChanges();
+            await DbContext.SaveChangesAsync();
+
+            return workExperience;
         }
 
-        public bool DeleteWorkExperience(int id)
+        public async Task<bool> DeleteWorkExperience(int id)
         {
-            WorkExperience grabbedWorkExperience = GetWorkExperience(id);
+            WorkExperience grabbedWorkExperience = await DbContext.WorkExperience.FindAsync(id);
             if (grabbedWorkExperience != null)
             {
                 DbContext.WorkExperience.Remove(grabbedWorkExperience);
-                DbContext.SaveChanges();
+                await DbContext.SaveChangesAsync();
                 return true;
             }
             return false;
         }
 
-        public List<WorkExperience> GetWorkExperienceForUser(int userId)
+        public async Task<List<WorkExperience>> GetWorkExperienceForUser(int userId)
         {
-            return DbContext.WorkExperience.Where(e => e.UserId == userId).ToList();
+            return await DbContext.WorkExperience
+                .Where(e => e.UserId == userId).ToListAsync();
         }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using EwuConnect.Domain.Models;
 using EwuConnect.Domain.Models.Forum;
 using EwuConnect.Domain.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace EwuConnect.Domain.Services
 {
@@ -16,33 +18,33 @@ namespace EwuConnect.Domain.Services
             DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public Response AddResponse(Response response)
+        public async Task<Response> AddResponse(Response response)
         {
             DbContext.Responses.Add(response);
-            DbContext.SaveChanges();
+            await DbContext.SaveChangesAsync();
             return response;
         }
 
-        public void UpdateResponse(Response response)
+        public async Task<Response> UpdateResponse(Response response)
         {
             DbContext.Responses.Update(response);
-            DbContext.SaveChanges();
+            await DbContext.SaveChangesAsync();
+            return response;
         }
 
-        public Response GetResponse_Id(int id)
+        public async Task<Response> GetResponse_Id(int id)
         {
-            return DbContext.Responses
-                .SingleOrDefault(r => r.Id == id);
+            return await DbContext.Responses.FindAsync(id);
         }
 
-        public List<Response> GetResponse_PostId(int postId)
+        public async Task<List<Response>> GetResponse_PostId(int postId)
         {
-            return DbContext.Responses.Where(r => r.Id == postId).ToList();
+            return await DbContext.Responses.Where(r => r.Id == postId).ToListAsync();
         }
 
-        public bool DeleteResponse(int id)
+        public async Task<bool> DeleteResponse(int id)
         {
-            Response foundResponse = DbContext.Responses.Find(id);
+            Response foundResponse = await DbContext.Responses.FindAsync(id);
 
             if (foundResponse != null)
             {
@@ -53,9 +55,9 @@ namespace EwuConnect.Domain.Services
             return false;
         }
 
-        public List<Response> GetBatchResponse()
+        public async Task<List<Response>> GetBatchResponse()
         {
-            return DbContext.Responses.ToList();
+            return await DbContext.Responses.ToListAsync();
 
         }
     }

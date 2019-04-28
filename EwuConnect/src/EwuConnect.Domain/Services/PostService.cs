@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using EwuConnect.Domain.Models;
 using EwuConnect.Domain.Models.Forum;
 using EwuConnect.Domain.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace EwuConnect.Domain.Services
 {
@@ -16,42 +18,42 @@ namespace EwuConnect.Domain.Services
             DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public Post AddPost(Post post)
+        public async Task<Post> AddPost(Post post)
         {
             DbContext.Posts.Add(post);
-            DbContext.SaveChanges();
+            await DbContext.SaveChangesAsync();
             return post;
         }
 
-        public void UpdatePost(Post post)
+        public async Task<Post> UpdatePost(Post post)
         {
             DbContext.Posts.Update(post);
-            DbContext.SaveChanges();
+            await DbContext.SaveChangesAsync();
+            return post;
         }
 
-        public Post GetPost_Id(int id)
+        public async Task<Post> GetPost_Id(int id)
         {
-            return DbContext.Posts
-                .SingleOrDefault(p => p.Id == id);
+            return await DbContext.Posts.FindAsync(id);
         }
-        public List<Post> GetPost_UserId(int userId)
+        public async Task<List<Post>> GetPost_UserId(int userId)
         {
-            return DbContext.Posts.Where(p => p.UserId == userId).ToList();
-        }
-
-        public List<Post> GetBatchPosts()   //Figure out how we want to implement
-        {
-            return DbContext.Posts.ToList();
+            return await DbContext.Posts.Where(p => p.UserId == userId).ToListAsync();
         }
 
-        public bool DeletePost(int id)
+        public async Task<List<Post>> GetBatchPosts()   //Figure out how we want to implement
         {
-            Post foundPost = DbContext.Posts.Find(id);
+            return await DbContext.Posts.ToListAsync();
+        }
+
+        public async Task<bool> DeletePost(int id)
+        {
+            Post foundPost = await DbContext.Posts.FindAsync(id);
 
             if (foundPost != null)
             {
                 foundPost.IsViewable = false;
-                DbContext.SaveChanges();
+                await DbContext.SaveChangesAsync();
                 return true;
             }
             return false;

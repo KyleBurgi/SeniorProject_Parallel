@@ -8,13 +8,9 @@
     <Compile Remove="Class1.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Models\Profile\" />
     <Folder Include="Models\Forum\" />
-    <Folder Include="Models\Chat\" />
-    <Folder Include="Services\" />
     <Folder Include="Models\Profile\SkillKeywords\" />
-    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.3" />

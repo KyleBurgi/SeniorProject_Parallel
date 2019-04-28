@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using EwuConnect.Domain.Models.Profile;
 
 namespace EwuConnect.Domain.Services.Interfaces
@@ -7,10 +8,10 @@ namespace EwuConnect.Domain.Services.Interfaces
     public interface IWorkExperienceService
     {
         /*CRUD*/
-        void AddWorkExperience(WorkExperience workExperience);
-        void UpdateWorkExperience(WorkExperience workExperience);
-        WorkExperience GetWorkExperience(int workExperienceId);
-        bool DeleteWorkExperience(int workExperienceId);
-        List<WorkExperience> GetWorkExperienceForUser(int userId);
+        Task<WorkExperience> AddWorkExperience(WorkExperience workExperience);
+        Task<WorkExperience> UpdateWorkExperience(WorkExperience workExperience);
+        Task<WorkExperience> GetWorkExperience(int workExperienceId);
+        Task<bool> DeleteWorkExperience(int workExperienceId);
+        Task<List<WorkExperience>> GetWorkExperienceForUser(int userId);
     }
 }

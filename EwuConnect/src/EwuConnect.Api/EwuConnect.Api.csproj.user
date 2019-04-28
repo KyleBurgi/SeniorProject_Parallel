@@ -5,4 +5,10 @@
     <LaunchUrl>swagger/index.html</LaunchUrl>
     <ApplicationURL>https://localhost:5001</ApplicationURL>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ActiveDebugProfile>EwuConnect.Api</ActiveDebugProfile>
+  </PropertyGroup>
 </Project>

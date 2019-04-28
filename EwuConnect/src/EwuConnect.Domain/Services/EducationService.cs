@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using EwuConnect.Domain.Models;
 using EwuConnect.Domain.Models.Profile;
 using EwuConnect.Domain.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace EwuConnect.Domain.Services
 {
@@ -22,40 +24,41 @@ namespace EwuConnect.Domain.Services
             DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public Education AddEducation(Education education) 
+        public async Task<Education> AddEducation(Education education) 
         {
             DbContext.Education.Add(education);
-            DbContext.SaveChanges();
+            await DbContext.SaveChangesAsync();
 
             return education;
         }
 
-        public Education GetEducation(int educationId)
+        public async Task<Education> GetEducation(int educationId)
         {
-            return DbContext.Education.SingleOrDefault(e => e.Id == educationId);
+            return await DbContext.Education.FindAsync(educationId);
         }
 
-        public void UpdateEducation(Education education)
+        public async Task<Education> UpdateEducation(Education education)
         {
             DbContext.Education.Update(education);
-            DbContext.SaveChanges();
+            await DbContext.SaveChangesAsync();
+            return education;
         }
 
-        public bool DeleteEducation(int educationId)
+        public async Task<bool> DeleteEducation(int educationId)
         {
-            Education grabbedEducation = GetEducation(educationId);
+            Education grabbedEducation = await DbContext.Education.FindAsync(educationId);
             if(grabbedEducation != null)
             {
                 DbContext.Education.Remove(grabbedEducation);
-                DbContext.SaveChanges();
+                await DbContext.SaveChangesAsync();
                 return true;
             }
             return false;
         }
 
-        public List<Education> GetEducationForUser(int userId)
+        public async Task<List<Education>> GetEducationForUser(int userId)
         {
-            return DbContext.Education.Where(e => e.UserId == userId).ToList();
+            return await DbContext.Education.Where(e => e.UserId == userId).ToListAsync();
         }
     }
 }
