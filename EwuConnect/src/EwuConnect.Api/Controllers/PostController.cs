@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
 using EwuConnect.Api.ViewModels;
 using EwuConnect.Domain.Models.Forum;
@@ -24,14 +25,14 @@ namespace EwuConnect.Api.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        public ActionResult<PostViewModel> CreatePost(PostInputViewModel viewModel)      // null reference happening with viewModel
+        public async Task<ActionResult<PostViewModel>> CreatePost(PostInputViewModel viewModel)      // null reference happening with viewModel
         {
             if (viewModel == null)
             {
                 return BadRequest();
             }
 
-            Post createdPost = PostService.AddPost(Mapper.Map<Post>(viewModel));
+            Post createdPost = await PostService.AddPost(Mapper.Map<Post>(viewModel));
 
             return CreatedAtAction(nameof(Get_PostId),
                 new { id = createdPost.Id },
@@ -40,14 +41,14 @@ namespace EwuConnect.Api.Controllers
 
 
         [HttpPut("{postId}")]
-        public ActionResult<PostViewModel> UpdatePost(int postId, Post post)
+        public async Task<ActionResult<PostViewModel>> UpdatePost(int postId, Post post)
         {
             if (postId < 0)
             {
                 return BadRequest();
             }
 
-            Post foundPost = PostService.GetPost_Id(postId);
+            Post foundPost = await PostService.GetPost_Id(postId);
 
             if (foundPost == null)
             {
@@ -56,22 +57,22 @@ namespace EwuConnect.Api.Controllers
 
             foundPost.Title = post.Title;
             foundPost.Content = post.Content;
-            PostService.UpdatePost(foundPost);
+            await PostService.UpdatePost(foundPost);
 
-            return Ok(Mapper.Map<PostViewModel>(foundPost));
+            return NoContent();
         }
 
 
 
         // GET api/<controller>/1
         [HttpGet("{userId}")]
-        public ActionResult<ICollection<PostViewModel>> Get_UserId(int userId)
+        public async Task<ActionResult<ICollection<PostViewModel>>> Get_UserId(int userId)
         {
             if (userId < 0)
             {
                 return BadRequest();
             }
-            List<Post> foundPosts = PostService.GetPost_UserId(userId);
+            List<Post> foundPosts = await PostService.GetPost_UserId(userId);
 
             if (foundPosts == null)
             {
@@ -81,13 +82,13 @@ namespace EwuConnect.Api.Controllers
         }
 
         [HttpGet("{postId}")]
-        public ActionResult<PostViewModel> Get_PostId(int postId)
+        public async Task<ActionResult<PostViewModel>> Get_PostId(int postId)
         {
             if (postId < 0)
             {
                 return BadRequest();
             }
-            Post foundPost = PostService.GetPost_Id(postId);
+            Post foundPost = await PostService.GetPost_Id(postId);
 
             if (foundPost == null)
             {
@@ -96,9 +97,9 @@ namespace EwuConnect.Api.Controllers
             return Ok(Mapper.Map<PostViewModel>(foundPost));
         }
         [HttpGet()]
-        public ActionResult<ICollection<PostViewModel>> GetAllPosts()
+        public async Task<ActionResult<ICollection<PostViewModel>>> GetAllPosts()
         {
-            List<Post> foundPosts = PostService.GetBatchPosts();
+            List<Post> foundPosts = await PostService.GetBatchPosts();
 
             if (foundPosts == null)
             {
@@ -109,9 +110,9 @@ namespace EwuConnect.Api.Controllers
 
         // DELETE api/<controller>/5
         [HttpDelete("{postId}")]
-        public ActionResult DeletePost(int postId)
+        public async Task<ActionResult> DeletePost(int postId)
         {
-            bool postWasDeleted = PostService.DeletePost(postId);
+            bool postWasDeleted = await PostService.DeletePost(postId);
             return postWasDeleted ? (ActionResult)Ok() : (ActionResult)NotFound();
         }
     }

@@ -6977,11 +6977,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Domain.Tests\\EwuConnect.Domain.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Domain.Tests\\EwuConnect.Domain.Tests.csproj",
       "projectName": "EwuConnect.Domain.Tests",
-      "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Domain.Tests\\EwuConnect.Domain.Tests.csproj",
+      "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Domain.Tests\\EwuConnect.Domain.Tests.csproj",
       "packagesPath": "C:\\Users\\Kyle Burgi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Domain.Tests\\obj\\",
+      "outputPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Domain.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7000,8 +7000,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj": {
-              "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj"
+            "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj": {
+              "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj"
             }
           }
         }

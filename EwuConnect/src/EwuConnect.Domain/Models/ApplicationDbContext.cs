@@ -26,7 +26,7 @@ namespace EwuConnect.Domain.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Conversation>()
-                .HasMany<Message>();
+                .HasKey(c => c.Id);
 
             modelBuilder.Entity<Mentee>().HasBaseType<User>();
             modelBuilder.Entity<Mentor>().HasBaseType<User>();

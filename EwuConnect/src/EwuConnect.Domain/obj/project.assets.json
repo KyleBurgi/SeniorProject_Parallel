@@ -4118,11 +4118,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj",
       "projectName": "EwuConnect.Domain",
-      "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj",
+      "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj",
       "packagesPath": "C:\\Users\\Kyle Burgi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"

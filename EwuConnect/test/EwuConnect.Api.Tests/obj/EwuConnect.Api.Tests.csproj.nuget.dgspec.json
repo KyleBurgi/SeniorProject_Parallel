@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Api.Tests\\EwuConnect.Api.Tests.csproj": {}
+    "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Api.Tests\\EwuConnect.Api.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Api\\EwuConnect.Api.csproj": {
+    "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Api\\EwuConnect.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Api\\EwuConnect.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Api\\EwuConnect.Api.csproj",
         "projectName": "EwuConnect.Api",
-        "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Api\\EwuConnect.Api.csproj",
+        "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Api\\EwuConnect.Api.csproj",
         "packagesPath": "C:\\Users\\Kyle Burgi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Api\\obj\\",
+        "outputPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj": {
-                "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj"
+              "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj": {
+                "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj"
               }
             }
           }
@@ -87,14 +87,14 @@
         }
       }
     },
-    "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj": {
+    "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj",
         "projectName": "EwuConnect.Domain",
-        "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj",
+        "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\EwuConnect.Domain.csproj",
         "packagesPath": "C:\\Users\\Kyle Burgi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -147,14 +147,14 @@
         }
       }
     },
-    "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Api.Tests\\EwuConnect.Api.Tests.csproj": {
+    "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Api.Tests\\EwuConnect.Api.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Api.Tests\\EwuConnect.Api.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Api.Tests\\EwuConnect.Api.Tests.csproj",
         "projectName": "EwuConnect.Api.Tests",
-        "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Api.Tests\\EwuConnect.Api.Tests.csproj",
+        "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Api.Tests\\EwuConnect.Api.Tests.csproj",
         "packagesPath": "C:\\Users\\Kyle Burgi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Api.Tests\\obj\\",
+        "outputPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\test\\EwuConnect.Api.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -173,8 +173,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Api\\EwuConnect.Api.csproj": {
-                "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Parallel\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Api\\EwuConnect.Api.csproj"
+              "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Api\\EwuConnect.Api.csproj": {
+                "projectPath": "C:\\Users\\Kyle Burgi\\Desktop\\EwuConnect_Repo\\SeniorProject_Parallel\\EwuConnect\\src\\EwuConnect.Api\\EwuConnect.Api.csproj"
               }
             }
           }

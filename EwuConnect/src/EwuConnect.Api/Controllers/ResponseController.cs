@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
 using EwuConnect.Api.ViewModels;
 using EwuConnect.Domain.Models.Forum;
@@ -23,14 +24,14 @@ namespace EwuConnect.Api.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        public ActionResult<Response> CreateResponse(ResponseInputViewModel viewModel)
+        public async Task<ActionResult<Response>> CreateResponse(ResponseInputViewModel viewModel)
         {
             if (viewModel == null)
             {
                 return BadRequest();
             }
 
-            Response createdResponse = ResponseService.AddResponse(Mapper.Map<Response>(viewModel));
+            Response createdResponse = await ResponseService.AddResponse(Mapper.Map<Response>(viewModel));
 
             return CreatedAtAction(nameof(Get_ResponseId),
                 new { id = createdResponse.Id },
@@ -39,14 +40,14 @@ namespace EwuConnect.Api.Controllers
 
 
         [HttpPut("{responseId}")]
-        public ActionResult<Response> UpdateResponse(int responseId, Response response)
+        public async Task<ActionResult<Response>> UpdateResponse(int responseId, Response response)
         {
             if (responseId < 0)
             {
                 return BadRequest();
             }
 
-            Response foundResponse = ResponseService.GetResponse_Id(responseId);
+            Response foundResponse = await ResponseService.GetResponse_Id(responseId);
 
             if (foundResponse == null)
             {
@@ -54,22 +55,22 @@ namespace EwuConnect.Api.Controllers
             }
 
             foundResponse.Content = response.Content;
-            ResponseService.UpdateResponse(foundResponse);
+            await ResponseService.UpdateResponse(foundResponse);
 
-            return response;
+            return NoContent();
         }
 
 
 
         // GET api/<controller>/1
         [HttpGet("{postId}")]
-        public ActionResult<List<Response>> Get_PostId(int postId)
+        public async Task<ActionResult<List<Response>>> Get_PostId(int postId)
         {
             if (postId < 0)
             {
                 return BadRequest();
             }
-            List<Response> foundResponses = ResponseService.GetResponse_PostId(postId);
+            List<Response> foundResponses = await ResponseService.GetResponse_PostId(postId);
 
             if (foundResponses == null)
             {
@@ -79,13 +80,13 @@ namespace EwuConnect.Api.Controllers
         }
 
         [HttpGet("{responseId}")]
-        public ActionResult<Response> Get_ResponseId(int responseId)
+        public async Task<ActionResult<Response>> Get_ResponseId(int responseId)
         {
             if (responseId < 0)
             {
                 return BadRequest();
             }
-            Response foundResponse = ResponseService.GetResponse_Id(responseId);
+            Response foundResponse = await  ResponseService.GetResponse_Id(responseId);
 
             if (foundResponse == null)
             {
@@ -94,9 +95,9 @@ namespace EwuConnect.Api.Controllers
             return foundResponse;
         }
         [HttpGet]
-        public ActionResult<List<Response>> GetAllResponses()
+        public async Task<ActionResult<List<Response>>> GetAllResponses()
         {
-            List<Response> foundResponses = ResponseService.GetBatchResponse();
+            List<Response> foundResponses = await ResponseService.GetBatchResponse();
 
             if (foundResponses == null)
             {
@@ -107,9 +108,9 @@ namespace EwuConnect.Api.Controllers
 
         // DELETE api/<controller>/5
         [HttpDelete("{responseId}")]
-        public ActionResult DeleteResponse(int responseId)
+        public async Task<ActionResult> DeleteResponse(int responseId)
         {
-            bool responseWasDeleted = ResponseService.DeleteResponse(responseId);
+            bool responseWasDeleted = await ResponseService.DeleteResponse(responseId);
             return responseWasDeleted ? (ActionResult)Ok() : (ActionResult)NotFound();
         }
 

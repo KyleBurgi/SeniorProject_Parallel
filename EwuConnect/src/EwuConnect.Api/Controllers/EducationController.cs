@@ -6,6 +6,7 @@ using EwuConnect.Domain.Models.Profile;
 using EwuConnect.Domain.Services.Interfaces;
 using EwuConnect.Api.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace EwuConnect.Api.Controllers
 {
@@ -37,7 +38,7 @@ namespace EwuConnect.Api.Controllers
 
 
         [HttpGet]
-        public ActionResult<EducationViewModel> GetEducation(int id)
+        public async Task<ActionResult<EducationViewModel>> GetEducation(int id)
         {
             if (id == 1)
             {
@@ -49,7 +50,7 @@ namespace EwuConnect.Api.Controllers
                                 Id = 1 };
             }
 
-            Education education = EducationService.GetEducation(id);
+            Education education = await EducationService.GetEducation(id);
 
             if (education == null)
             {
@@ -61,9 +62,9 @@ namespace EwuConnect.Api.Controllers
 
 
         [HttpPost]
-        public ActionResult<EducationViewModel> CreateEducation(EducationInputViewModel viewModel)
+        public async Task<ActionResult<EducationViewModel>> CreateEducation(EducationInputViewModel viewModel)
         {
-            Education createdEducation = EducationService.AddEducation(Mapper.Map<Education>(viewModel));
+            Education createdEducation = await EducationService.AddEducation(Mapper.Map<Education>(viewModel));
 
             return CreatedAtAction(nameof(GetEducation),
                 new { id = createdEducation.Id },
@@ -71,8 +72,9 @@ namespace EwuConnect.Api.Controllers
         }
         // GET api/EducationController/user/5
         [HttpGet("user/{userId}")]
-        public string TestGet(int userId)
+        public async Task<string> TestGet(int userId)
         {
+            await Task.Run(null);
             return "blah";
         }
     }
