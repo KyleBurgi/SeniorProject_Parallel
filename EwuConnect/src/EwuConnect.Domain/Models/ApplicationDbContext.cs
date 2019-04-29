@@ -17,6 +17,7 @@ namespace EwuConnect.Domain.Models
         public DbSet<Response> Responses { get; set; }
         public DbSet<Conversation> Conversations { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<Login> Logins { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {

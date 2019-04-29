@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EwuConnect.Domain.Services
 {
-    class ResponseService : IResponseService
+    public class ResponseService : IResponseService
     {
         private ApplicationDbContext DbContext { get; }
 

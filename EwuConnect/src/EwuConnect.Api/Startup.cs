@@ -30,6 +30,11 @@ namespace EwuConnect.Api
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IEducationService, EducationService>();
             services.AddScoped<IWorkExperienceService, WorkExperienceService>();
+            services.AddScoped<IConversationService, ConversationService>();
+            services.AddScoped<IMessageService, MessageService>();
+            services.AddScoped<IPostService, PostService>();
+            services.AddScoped<IResponseService, ResponseService>();
+
             services.AddAutoMapper();
 
             var connection = new SqliteConnection("DataSource=:memory:");

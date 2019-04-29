@@ -1,11 +1,13 @@
-﻿using EwuConnect.Domain.Models.Profile;
+﻿using EwuConnect.Domain.Models.Chat;
+using EwuConnect.Domain.Models.Profile;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace EwuConnect.Domain.Models.Chat
+namespace EwuConnect.Api.ViewModels
 {
-    public class Message
+    public class MessageViewModel
     {
         public int Id { get; set; }
         public int ConversationId { get; set; }
