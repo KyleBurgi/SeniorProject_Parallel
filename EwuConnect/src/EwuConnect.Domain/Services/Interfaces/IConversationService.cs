@@ -9,5 +9,6 @@ namespace EwuConnect.Domain.Services.Interfaces
     public interface IConversationService
     {
         Task<Conversation> GetConversation(int id);
+        Task<Conversation> AddConversation(Conversation conversation);
     }
 }

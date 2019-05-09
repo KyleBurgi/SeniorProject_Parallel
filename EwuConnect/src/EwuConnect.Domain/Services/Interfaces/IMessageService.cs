@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using EwuConnect.Domain.Models.Chat;
 
 namespace EwuConnect.Domain.Services.Interfaces
 {
     public interface IMessageService
     {
-        Task<string> AddMessage(String content);
+        Task<Message> AddMessage(Message message);
+        Task<Message> GetMessage(int id); 
     }
 }

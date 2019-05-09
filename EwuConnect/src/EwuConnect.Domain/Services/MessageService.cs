@@ -1,4 +1,5 @@
 ﻿using EwuConnect.Domain.Models;
+using EwuConnect.Domain.Models.Chat;
 using EwuConnect.Domain.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,16 @@ namespace EwuConnect.Domain.Services
         {
             DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
-        public Task<string> AddMessage(string content)
+        public async Task<Message> AddMessage(Message message)
         {
-            throw new NotImplementedException();
+            DbContext.Messages.Add(message);
+            await DbContext.SaveChangesAsync();
+            return message;
+        }
+
+        public async Task<Message> GetMessage(int id)
+        {
+            return await DbContext.Messages.FindAsync(id);
         }
     }
 }

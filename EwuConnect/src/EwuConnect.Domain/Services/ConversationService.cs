@@ -1,4 +1,5 @@
-﻿using EwuConnect.Domain.Models.Chat;
+﻿using EwuConnect.Domain.Models;
+using EwuConnect.Domain.Models.Chat;
 using EwuConnect.Domain.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,22 @@ namespace EwuConnect.Domain.Services
 {
     public class ConversationService : IConversationService
     {
-        public Task<Conversation> GetConversation(int id)
+        private ApplicationDbContext DbContext { get; }
+
+        public ConversationService(ApplicationDbContext dbContext)
         {
-            throw new NotImplementedException();
+            DbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+        }
+        public async Task<Conversation> AddConversation(Conversation conversation)
+        {
+            DbContext.Conversations.Add(conversation);
+            await DbContext.SaveChangesAsync();
+            return conversation;
+        }
+
+        public async Task<Conversation> GetConversation(int id)
+        {
+            return await DbContext.Conversations.FindAsync(id);
         }
     }
 }

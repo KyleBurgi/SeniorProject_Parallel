@@ -34,6 +34,7 @@ namespace EwuConnect.Api
             services.AddScoped<IMessageService, MessageService>();
             services.AddScoped<IPostService, PostService>();
             services.AddScoped<IResponseService, ResponseService>();
+            services.AddScoped<ILoginService, LoginService>();
 
             services.AddAutoMapper();
 

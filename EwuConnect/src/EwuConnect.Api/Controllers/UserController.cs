@@ -23,9 +23,6 @@ namespace EwuConnect.Api.Controllers
             Mapper = mapper;
         }
 
-        //TODO: FIX THIS CODE
-        //TODO: ASYNC
-
         [HttpGet]
         public async Task<ActionResult<ICollection<UserViewModel>>> GetAllUsers()
         {
