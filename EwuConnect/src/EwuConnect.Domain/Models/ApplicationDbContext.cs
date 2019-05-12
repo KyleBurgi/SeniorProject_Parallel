@@ -9,9 +9,9 @@ namespace EwuConnect.Domain.Models
     public class ApplicationDbContext : DbContext
     {
         public DbSet<User> Users { get; set; }
+        public DbSet<PersonalInformation> PersonalInformation { get; set; } 
+        public DbSet<ContactInformation> ContactInformation { get; set; }
         public DbSet<Education> Education { get; set; }
-        public DbSet<Mentee> Mentees { get; set; }
-        public DbSet<Mentor> Mentors { get; set; }
         public DbSet<WorkExperience> WorkExperience { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Response> Responses { get; set; }
@@ -26,12 +26,10 @@ namespace EwuConnect.Domain.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>()
+                .HasKey(u => u.Id);
             modelBuilder.Entity<Conversation>()
                 .HasKey(c => c.Id);
-
-            modelBuilder.Entity<Mentee>().HasBaseType<User>();
-            modelBuilder.Entity<Mentor>().HasBaseType<User>();
-
         }
 
     }

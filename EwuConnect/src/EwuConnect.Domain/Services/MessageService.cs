@@ -1,8 +1,10 @@
 ﻿using EwuConnect.Domain.Models;
 using EwuConnect.Domain.Models.Chat;
 using EwuConnect.Domain.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,6 +28,11 @@ namespace EwuConnect.Domain.Services
         public async Task<Message> GetMessage(int id)
         {
             return await DbContext.Messages.FindAsync(id);
+        }
+
+        public async Task<List<Message>> GetConversation(int conversationId)
+        {
+            return await DbContext.Messages.Where(g => g.ConversationId == conversationId).ToListAsync();
         }
     }
 }

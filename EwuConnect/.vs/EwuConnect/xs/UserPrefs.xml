@@ -1,18 +1,18 @@
 ﻿<Properties StartupConfiguration="{A5A54130-1B63-41C8-B437-6638E7E513BC}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.src.EwuConnect.Api PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.test.EwuConnect.Domain.Tests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Domain/Services/ConversationService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/EwuConnect.Api/ViewModels/UserViewModel.cs">
     <Files>
-      <File FileName="src/EwuConnect.Api/Controllers/ConversationController.cs" Line="52" Column="1" />
-      <File FileName="src/EwuConnect.Api/Controllers/MessageController.cs" Line="36" Column="9" />
-      <File FileName="src/EwuConnect.Api/Controllers/UserController.cs" Line="24" Column="10" />
-      <File FileName="src/EwuConnect.Api/ViewModels/MessageInputViewModel.cs" Line="16" Column="17" />
-      <File FileName="src/EwuConnect.Domain/Models/ApplicationDbContext.cs" Line="1" Column="1" />
-      <File FileName="src/EwuConnect.Domain/Models/Login.cs" Line="1" Column="1" />
-      <File FileName="src/EwuConnect.Api/Startup.cs" Line="37" Column="63" />
-      <File FileName="src/EwuConnect.Api/Controllers/EducationController.cs" Line="67" Column="13" />
-      <File FileName="src/EwuConnect.Domain/Services/Interfaces/IConversationService.cs" Line="1" Column="1" />
-      <File FileName="src/EwuConnect.Domain/Services/ConversationService.cs" Line="23" Column="33" />
+      <File FileName="src/EwuConnect.Domain/Services/MessageService.cs" Line="35" Column="98" />
+      <File FileName="src/EwuConnect.Api/Controllers/MessageController.cs" Line="47" Column="10" />
+      <File FileName="src/EwuConnect.Domain/Models/Profile/User.cs" Line="11" Column="36" />
+      <File FileName="src/EwuConnect.Domain/Models/Profile/PersonalInformation.cs" Line="11" Column="48" />
+      <File FileName="src/EwuConnect.Domain/Models/Profile/ContactInformation.cs" Line="7" Column="22" />
+      <File FileName="src/EwuConnect.Domain/Models/ApplicationDbContext.cs" Line="30" Column="36" />
+      <File FileName="src/EwuConnect.Api/Controllers/UserController.cs" Line="60" Column="76" />
+      <File FileName="src/EwuConnect.Api/ViewModels/UserViewModel.cs" Line="12" Column="1" />
+      <File FileName="src/EwuConnect.Api/ViewModels/UserInputViewModel.cs" Line="13" Column="46" />
+      <File FileName="src/EwuConnect.Api/ViewModels/UserUpdateViewModel.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,12 +21,13 @@
             <Node name="src" expanded="True">
               <Node name="EwuConnect.Api" expanded="True">
                 <Node name="Controllers" expanded="True" />
+                <Node name="ViewModels" expanded="True">
+                  <Node name="UserViewModel.cs" selected="True" />
+                </Node>
               </Node>
               <Node name="EwuConnect.Domain" expanded="True">
-                <Node name="Models" expanded="True" />
-                <Node name="Services" expanded="True">
-                  <Node name="Interfaces" expanded="True" />
-                  <Node name="ConversationService.cs" selected="True" />
+                <Node name="Models" expanded="True">
+                  <Node name="Profile" expanded="True" />
                 </Node>
               </Node>
             </Node>

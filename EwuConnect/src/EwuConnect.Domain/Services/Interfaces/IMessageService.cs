@@ -9,6 +9,7 @@ namespace EwuConnect.Domain.Services.Interfaces
     public interface IMessageService
     {
         Task<Message> AddMessage(Message message);
-        Task<Message> GetMessage(int id); 
+        Task<Message> GetMessage(int id);
+        Task<List<Message>> GetConversation(int conversationId);
     }
 }

@@ -45,5 +45,17 @@ namespace EwuConnect.Api.Controllers
 
             return Ok(Mapper.Map<MessageViewModel>(message));
         }
+
+        [HttpGet("conversation/{conversatoinId}")]
+        public async Task<ActionResult<List<Message>>> GetConversation(int conversationId)
+        {
+            if (conversationId <= 0)
+            {
+                return NotFound();
+            }
+            List<Message> conversation = await MessageService.GetConversation(conversationId);
+
+            return Ok(conversation.Select(x => Mapper.Map<MessageViewModel>(x)).ToList());
+        }
     }
 }
